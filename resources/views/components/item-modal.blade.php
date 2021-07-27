@@ -48,6 +48,7 @@
 
           <input name="itemName" type="hidden" value="{{$currentModalItemName}}">{{-- FORM PASS --}}
           <h2 class="price">{{"₱". $item->price}}</h2>
+          <h6>Allegens: {{$item->allegens}}</h6>
           <input name="itemPrice" type="hidden" class="h2 itemPrice" value="{{"₱". $item->price}}">{{-- FORM PASS --}}
           <h5 class="mt-2">Size</h5>
           <select class="form-select" name="itemSize" id="select{{$x}}" onchange="price(this, {{$x}})" name="sizeOption">{{-- FORM PASS --}}
