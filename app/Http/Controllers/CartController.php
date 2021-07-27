@@ -38,7 +38,7 @@ class CartController extends Controller
 
     public function dd()
     {
-        dd(Cart::content());
+        dd(request('search'));
     }
 
 }

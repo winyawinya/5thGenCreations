@@ -43,7 +43,7 @@
                 @endguest
               </li>
             </ul>
-            <form class="d-flex" action="/products" method="GET">
+            <form class="d-flex" action="{{route('dd')}}" method="GET">
                 <input class="form-control ms-auto me-2" type="search" name="search" placeholder="Search your favorites!" aria-label="Search">
                 <button class="btn btn-primary searchbutton" type="submit"><i class="fas fa-search"></i></button>
             </form>

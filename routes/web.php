@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //FOR DEBUGGING
-Route::get('dd', [CartController::class,'dd']);
+Route::get('dd', [CartController::class,'dd'])->name('dd');
 
 //HOMEPAGE AND MENUPAGE
 
