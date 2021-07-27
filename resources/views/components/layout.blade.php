@@ -44,7 +44,7 @@
               </li>
             </ul>
             <form class="d-flex" action="/products" method="GET">
-                <input class="form-control ms-auto me-2" type="search" name="search" placeholder="Search your favorites!" aria-label="Search">
+                <input class="form-control ms-auto me-2" type="search" name="search" placeholder="Search your favorites!" aria-label="Search" value="{{request('search')}}">
                 <button class="btn btn-primary searchbutton" type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
