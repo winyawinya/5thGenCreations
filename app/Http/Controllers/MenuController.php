@@ -20,7 +20,7 @@ class MenuController extends Controller
     public function MenuPage()
     {
         return view('menu', [
-            'menu' => Menu::orderBy('category', 'DESC')->orderBy('name', 'DESC')->filter(request(['search']))->get()
+            'menu' => Menu::filter(request(['search']))->orderBy('category', 'DESC')->orderBy('name', 'DESC')->get()
         ]);
     }
 
