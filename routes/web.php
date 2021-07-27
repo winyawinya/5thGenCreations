@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//FOR DEBUGGING
-Route::get('dd', [CartController::class,'dd'])->name('dd');
-
 //HOMEPAGE AND MENUPAGE
 
 Route::get('/', [MenuController::class,'HomePage'])->where('menu', "[A-z_\-]+");

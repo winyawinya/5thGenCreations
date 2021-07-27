@@ -36,9 +36,4 @@ class CartController extends Controller
         return redirect('cart');
     }
 
-    public function dd()
-    {
-        dd(request('search'));
-    }
-
 }
