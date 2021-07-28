@@ -29,7 +29,11 @@
                 @guest
                   <a href="/login" class="nav-link">LOGIN</a>
                 @else
-                  <a href="/profile" class="nav-link">PROFILE</a>
+                  @if (auth()->user()->isAdmin)
+                    <a href="/admin" class="nav-link">ADMIN</a>
+                  @else
+                    <a href="/profile" class="nav-link">PROFILE</a>
+                  @endif
                 @endguest
               </li>
               <li class="nav-item ms-0 ms-sm-2 ms-md-0 ms-lg-4 ms-xl-4 ms-xxl-4">

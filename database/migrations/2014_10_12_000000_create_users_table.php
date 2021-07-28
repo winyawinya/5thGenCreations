@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->text('address');
             $table->string('phone_number');
             $table->date('birthday');
+            $table->boolean('isAdmin');
             $table->rememberToken();
             $table->timestamps();
         });

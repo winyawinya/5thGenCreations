@@ -18,11 +18,12 @@ class CreateMenusTable extends Migration
             $table->string("name");
             $table->string("category");
             $table->string("variant");
-            $table->string("size") -> nullable();
-            $table->string("flavors")-> nullable();
+            $table->string("size") ->nullable();
+            $table->string("flavors")->nullable();
             $table->float("price");
             $table->string("allegens");
             $table->text("description");
+            $table->integer("stocks")->nullable();
             $table->timestamps();
         });
     }

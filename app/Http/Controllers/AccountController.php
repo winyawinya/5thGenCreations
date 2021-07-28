@@ -56,6 +56,7 @@ class AccountController extends Controller
         ]);
         $userInfo['name'] = ucfirst($userInfo['name']);
         $userInfo['password'] = bcrypt($userInfo['password']);
+        $userInfo['isAdmin'] = FALSE;
         $user = User::create($userInfo);
         return redirect('/login')->with('registered', 'Your account has been created. Log in now to order!');
     }

@@ -12,7 +12,7 @@ class MenuController extends Controller
     public function HomePage()
     {
         return view('welcome', [
-            'new' => Menu::orderBy('category', 'DESC')->orderBy('name', 'DESC')->orderBy('created_at', "ASC")->get(),
+            'new' => Menu::orderBy('category', 'DESC')->orderBy('name', 'DESC')->orderBy('created_at', "ASC")->get()
         ]); 
     }
 
