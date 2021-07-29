@@ -2,7 +2,7 @@
     <div class="container maincontainer py-2">
       <h1 class="fw-bold mb-4">Cart</h1>
           <div class="row">
-            @if ($cart->count() != 0)
+            @if ($cart->isNotEmpty())
                 <div class="container col-8 col-md-11 col-sm-12">   
                     @foreach ($cart as $cartItem)
                         <x-cart-card :cartItem="$cartItem"/>
