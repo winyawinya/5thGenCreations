@@ -9,7 +9,10 @@ class AdminController extends Controller
 {
     public function adminPanel()
     {
-        return view('dashboard/admin');
+        return view('dashboard/admin', [
+            'inStock' => Menu::where('stocks', '!=', 0)->get(),
+            'outOfStock' => Menu::where('stocks', '=', 0)->get(),
+        ]);
     }
 
     public function adminAllProducts()
