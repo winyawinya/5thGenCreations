@@ -24,7 +24,7 @@
               <li class="nav-item ms-0 ms-sm-2 ms-md-0 ms-lg-5 ms-xl-5 ms-xxl-5"><a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
               @endauth
             </ul>
-            <ul class="navbar-nav login ms-auto me-3 text-center">
+            <ul class="navbar-nav login ms-auto me-0 me-md-3 me-lg-3 me-xl-3 me-xxl-3 text-center">
               <li class="nav-item">
                 @guest
                   <a href="/login" class="nav-link">LOGIN</a>
@@ -36,13 +36,13 @@
                   @endif
                 @endguest
               </li>
-              <li class="nav-item ms-0 ms-sm-2 ms-md-0 ms-lg-4 ms-xl-4 ms-xxl-4">
+              <li class="nav-item ms-0 ms-sm-0 ms-md-0 ms-lg-4 ms-xl-4 ms-xxl-4">
                 @guest
                   <a href="/register" class="nav-link">REGISTER</a>
                 @else
                 <form action="/logout" method="POST">
                   @csrf
-                  <button type="submit" class="btn btn-link nav-link" style="font-weight: bold;font-size: 17.5px;">LOGOUT</button>
+                  <button type="submit" class="btn btn-link nav-link w-100" style="font-weight: bold;font-size: 17.5px;">LOGOUT</button>
                 </form>
                 @endguest
               </li>

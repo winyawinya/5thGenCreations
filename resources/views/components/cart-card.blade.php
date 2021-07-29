@@ -5,10 +5,10 @@
 
 <div class="card mb-3" style="width: 100%;">
   <div class="card-body row">
-    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-3 col-xl-3">
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
       <img src="\assets\menu\{{$cartItem->name}}.jpg" class="rounded-3" height="200px" width="250px">
     </div>
-    <div class="col-xs-8 col-sm-8 col-md-4 col-lg-6 col-xl-6">
+    <div class="col-xs-8 col-sm-8 col-md-4 col-lg-4 col-xl-6">
       <h5 class="card-title fs-2">{{$cartItem->name}}</h5>
       <p class="card-text fs-5">
         Quantity: {{$cartItem->qty}}

@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container maincontainer py-2">
       <h1 class="fw-bold mb-4">Cart</h1>
-          <div class="row">
+          <div class="row overflow-auto" style="height: 800px">
             @if ($cart->isNotEmpty())
                 <div class="container col-8 col-md-11 col-sm-12">   
                     @foreach ($cart as $cartItem)
@@ -11,18 +11,19 @@
             @else
             <div class="container">
               <div class="row p-5 justify-content-center">
-                  <div class="col-md-8 col-lg-8 col-xl-8 col-12 my-5 p-5 rounded-3 shadow-lg" style="
+                  <div class="col-md-8 col-lg-8 col-xl-8 col-12 p-5 rounded-3 shadow-lg" style="
                   background: #d8f3dc; 
                   color: #425545;
                   font-weight: bold;
+                  margin-top: 150px;
                   "><h1 class="text-center p-5 antonfont">CART IS EMPTY</h1>
                   </div>
               </div>
             @endif
             </div>
           </div>
-          @if ($cart->count() != 0)
-            <div class="d-flex justify-content-end">
+          @if ($cart->isNotEmpty())
+            <div class="d-flex justify-content-end mt-4">
               <button class="btn btn-primary fs-3">Checkout</button>
             </div>
           @endif
