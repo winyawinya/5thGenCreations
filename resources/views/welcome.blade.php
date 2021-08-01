@@ -2,8 +2,17 @@
   @php
       $picName = "homepage"
   @endphp
+
+{{-- Preloader --}}
+  <link rel="stylesheet" href="loader/loader.css">
+  <script src="loader/loader.js"></script>
+  <div class="loader-body" id="loader">
+    <div class="loader"></div>
+    <img src="assets\5thgen Logo.png" width="400px" height="400px" alt="">
+  </div>
+
 <!-- carousel -->
-    <x-carousel :midButtons=TRUE :picName="$picName"/>  
+  <x-carousel :midButtons=TRUE :picName="$picName"/>  
   <div class="container-fluid py-4" style="background: #d8f3dc; color: #ffc372; text-shadow: 3px 3px 3px black;">
     <h1 class="text-center otomanopeefont">BESTSELLERS</h1>
   </div>
