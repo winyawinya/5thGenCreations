@@ -9,7 +9,7 @@
     <body>
       <!-- navigation bar -->
       <nav class="navbar playfairfont navbar-light bg-white sticky-top navbar-expand-lg rounded-3">
-        <div class="container">
+        <div class="container-lg">
           <a href="/" class="navbar-brand ms-3"><img src="assets\5thgen Logo.png" width="60px" height="60px" alt=""></a>
           <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
               <span class="navbar-toggler-icon"></span>
