@@ -7,7 +7,7 @@
   <div class="container-fluid py-4" style="background: #d8f3dc; color: #ffc372; text-shadow: 3px 3px 3px black;">
     <h1 class="text-center otomanopeefont">BESTSELLERS</h1>
   </div>
-  <div class="container-fluid maincontainer">
+  <div class="container-fluid">
 <!-- Bestsellers -->
     <div class="container py-3">
       <div class="row d-flex justify-content-center">

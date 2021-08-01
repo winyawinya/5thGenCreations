@@ -33,7 +33,7 @@
 </script>
 
 <div class="modal fade" id="MenuModal{{$x}}" tabindex="-1" aria-labelledby="item-title" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title" id="item-title">{{$currentModalItemName}}</h2>
