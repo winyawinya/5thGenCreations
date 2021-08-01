@@ -37,7 +37,7 @@ Route::get ('register', [AccountController::class, 'showRegister'])->middleware(
 Route::post('register', [AccountController::class, 'register'])->middleware('guest');
 Route::get ('login', [AccountController::class, 'showLogin'])->middleware('guest');
 Route::post ('login', [AccountController::class, 'login'])->middleware('guest');
-Route::post('logout',[AccountController::class, 'logout'])->middleware('auth');
+Route::get('logout',[AccountController::class, 'logout'])->middleware('auth');
 Route::get('profile',[AccountController::class, 'showProfile'])->middleware('auth');
 Route::get('edit-profile',[AccountController::class, 'editProfile'])->middleware('auth');
 Route::post('profile',[AccountController::class, 'changedProfile'])->middleware('auth');

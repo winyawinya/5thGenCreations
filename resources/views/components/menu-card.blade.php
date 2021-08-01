@@ -33,8 +33,8 @@
         
         <!-- check kung duplicate name dahil may iba ibang variants. unang variant lang dapat magpapakita -->
         @if ($item->name !== $lastitem)
-            <div class="d-flex col-xxl-4 col-xl-5 col-7 my-3 mx-3">
-                <div class="card mt-2" style="width: 400px; box-shadow: 10px 10px 3px grey;">
+            <div class="d-flex justify-content-center col-xxl-5 col-xl-5 col-lg-5 col-12 my-3 mx-3">
+                <div class="card mt-2" style="width: 400px;">
                     <img src="assets\menu\{{$item->name}}.jpg" class="card-img-top" alt="...">
                     <div class="card-body d-flex flex-column">
                     <h5 class="card-title fw-bold bebasfont">{{$item->name}}</h5>

@@ -2,28 +2,26 @@
   @php
       $picName = "homepage"
   @endphp
-
-  <div class="container maincontainer pt-2">
-
-  <!-- carousel -->
-    <x-carousel :midButtons=TRUE :picName="$picName"/>
-
-  <!-- what's new -->
-    <div class="container py-5 pt-2" style="background: #f2efed">
-      <h2 class="text-start otomanopeefont">Bestsellers</h2>
+<!-- carousel -->
+    <x-carousel :midButtons=TRUE :picName="$picName"/>  
+  <div class="container-fluid py-4" style="background: #d8f3dc; color: #ffc372; text-shadow: 3px 3px 3px black;">
+    <h1 class="text-center otomanopeefont">BESTSELLERS</h1>
+  </div>
+  <div class="container-fluid maincontainer">
+<!-- Bestsellers -->
+    <div class="container py-3">
       <div class="row d-flex justify-content-center">
 
           <x-menu-card :menu="$new" :limit=3 :withCategory=FALSE/>
         
       </div>
     </div>
-
   </div>
 
-  <div class="container p-5 rounded-3" style="background: #d8f3dc; color: #ffc372;">
+  <div class="container-fluid p-5 rounded-3" style="background: #d8f3dc; color: #ffc372;">
     <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
     <div class="container-fluid py-5">
-      <h1 class="fw-bold shadowText antonfont" style="font-size: 100px;">
+      <h1 class="fw-bold shadowText antonfont" style="font-size: 8vmax;">
         'PASTRIES <br> 
         LOVED BY <br> 
         EVERY <br> 

@@ -8,23 +8,21 @@
     </head>
     <body>
       <!-- navigation bar -->
-      <div class="container-fluid vh-10 longdiv" style="background: #ffc372"></div>
-      <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
-      <nav class="navbar playfairfont sticky-top navbar-light navbar-expand-md ms-auto">
-        <div class="container-fluid">
+      <nav class="navbar playfairfont navbar-light bg-white sticky-top navbar-expand-lg rounded-3">
+        <div class="container">
           <a href="/" class="navbar-brand ms-3"><img src="assets\5thgen Logo.png" width="60px" height="60px" alt=""></a>
           <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="navbar-collapse collapse" id="navbar">
             <ul class="navbar-nav text-center">
-              <li class="nav-item ms-0 ms-sm-2 ms-md-0 ms-lg-5 ms-xl-5 ms-xxl-5"><a href="/" class="nav-link">HOME</a></li>
-              <li class="nav-item ms-0 ms-sm-2 ms-md-0 ms-lg-5 ms-xl-5 ms-xxl-5"><a href="/products" class="nav-link">PRODUCTS </a></li>
+              <li class="nav-item ms-0 ms-md-0 ms-lg-3 ms-xl-3 ms-xxl-3"><a href="/" class="nav-link">HOME</a></li>
+              <li class="nav-item ms-0 ms-md-0 ms-lg-3 ms-xl-3 ms-xxl-3"><a href="/products" class="nav-link">PRODUCTS </a></li>
               @auth
-              <li class="nav-item ms-0 ms-sm-2 ms-md-0 ms-lg-5 ms-xl-5 ms-xxl-5"><a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+              <li class="nav-item ms-0 ms-md-0 ms-lg-3 ms-xl-3 ms-xxl-3"><a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
               @endauth
             </ul>
-            <ul class="navbar-nav login ms-auto me-0 me-md-3 me-lg-3 me-xl-3 me-xxl-3 text-center">
+            <ul class="navbar-nav login text-center ms-auto me-lg-3">
               <li class="nav-item">
                 @guest
                   <a href="/login" class="nav-link">LOGIN</a>
@@ -36,26 +34,21 @@
                   @endif
                 @endguest
               </li>
-              <li class="nav-item ms-0 ms-sm-0 ms-md-0 ms-lg-4 ms-xl-4 ms-xxl-4">
+              <li class="nav-item ms-0 ms-sm-0 ms-md-0 ms-lg-3 ms-xl-3 ms-xxl-3">
                 @guest
                   <a href="/register" class="nav-link">REGISTER</a>
                 @else
-                <form action="/logout" method="POST">
-                  @csrf
-                  <button type="submit" class="btn btn-link nav-link w-100" style="font-weight: bold;font-size: 17.5px;">LOGOUT</button>
-                </form>
+                  <a href="/logout" class="nav-link">LOGOUT</a>
                 @endguest
               </li>
             </ul>
-            <form class="d-flex" action="/products" method="GET">
-                <input class="form-control ms-auto me-2" type="search" name="search" placeholder="Search your favorites!" aria-label="Search" value="{{request('search')}}">
-                <button class="btn btn-primary searchbutton" type="submit"><i class="fas fa-search"></i></button>
+            <form class="d-flex justify-content-center" action="/products" method="GET">
+              <input class="form-control searchbar pe-5" type="text" name="search" placeholder="SEARCH" aria-label="Search" value="{{request('search')}}">
+              <button class="btn searchbutton" type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
         </div> 
       </nav>
-      <div class="container-fluid vh-10 longdiv" style="background: #020202"></div>
-
       {{ $slot }}
       
     </body>

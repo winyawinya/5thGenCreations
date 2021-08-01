@@ -36,7 +36,7 @@ class AccountController extends Controller
                 ->withErrors(['email'=>'The credentials you provided is wrong'])
     ;}
 
-    public function logout()
+    public function klogout()
     {
         Auth::logout();
         return view('welcome', [
