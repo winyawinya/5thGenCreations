@@ -19,7 +19,7 @@
     <div class="carousel-inner">
       <!-- NOTE! Kung iibahin niyo yung carousel images, iresize niyo yung MISMONG image na ipapalit gamit MS Paint. -->
       <!-- yung ginawa ko is HEIGHT = 1200px and WIDTH = 450px, kung gusto niyo ibahin size make sure pareparehas ng size lahat. -->
-      <div class="carousel-content">
+      <div class="carousel-content uchenfont">
         <h1 style="font-size: 8vw;">
           Welcome <br>
           To <br>
