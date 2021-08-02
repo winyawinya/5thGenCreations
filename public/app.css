@@ -40,6 +40,7 @@
 
 .carouselpic{
     filter: brightness(60%);
+    width: 100vw;
 }
 
 .card-body > .btn{

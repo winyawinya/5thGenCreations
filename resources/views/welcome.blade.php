@@ -13,12 +13,12 @@
 
 <!-- carousel -->
   <x-carousel :midButtons=TRUE :picName="$picName"/>  
-  <div class="container-fluid py-4" style="background: #d8f3dc; color: #ffc372; text-shadow: 3px 3px 3px black;">
-    <h1 class="text-center otomanopeefont">BESTSELLERS</h1>
-  </div>
-  <div class="container-fluid">
+  <div class="container-fluid" style="background: #a82424; height: 2.5vw;"></div>
+  <div class="container-fluid" style="background: #d8f3dc; height: 2.5vw;"></div>
 <!-- Bestsellers -->
-    <div class="container py-3">
+  <div class="container-fluid py-5">
+    <h1 class="text-center otomanopeefont" style="color: #ffc372; text-shadow: 3px 3px 3px black;">BESTSELLERS</h1>
+    <div class="container py-5">
       <div class="row d-flex justify-content-center">
 
           <x-menu-card :menu="$new" :limit=3 :withCategory=FALSE/>

@@ -33,8 +33,8 @@
         
         <!-- check kung duplicate name dahil may iba ibang variants. unang variant lang dapat magpapakita -->
         @if ($item->name !== $lastitem)
-            <div class="d-flex justify-content-center col-xxl-5 col-xl-5 col-lg-5 col-12 my-3 mx-3">
-                <div class="card mt-2" style="width: 400px;">
+            <div class="d-flex justify-content-between col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-10 my-3">
+                <div class="card mt-2">
                     <img src="assets\menu\{{$item->name}}.jpg" class="card-img-top" alt="...">
                     <div class="card-body d-flex flex-column">
                     <h5 class="card-title fw-bold bebasfont">{{$item->name}}</h5>
@@ -77,13 +77,13 @@
 @endif
 <div class="modal fade" id="loginKaMuna" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content playfairfont">
         <div class="modal-body">
-          <h1 class="text-center fw-bold antonfont">Sign in first to order!</h1>
+          <h1 class="text-center fw-bold py-3 text-danger">Sign in first to order!</h1>
         </div>
-        <div class="modal-footer">
-          <a href="/login" class="btn btn-primary">Login</a>
-          <a href="/register" class="btn btn-primary">Register</a>
+        <div class="d-flex justify-content-center pb-4">
+          <a href="/login" class="btn nav-link fw-bold me-3">LOGIN</a>
+          <a href="/register" class="btn nav-link fw-bold ms-3">REGISTER</a>
         </div>
       </div>
     </div>

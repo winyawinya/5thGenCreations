@@ -24,16 +24,16 @@
           Welcome <br>
           To <br></h1>
           <h1 style="font-size: 8vw;">5thgen Creations!</h1>
-        <a href="/products" class="btn btn-danger mt-4 arapeifont" style="font-size: 1.5vw">Check out our Menu!</a>
+        <a href="/products" class="btn btn-danger mt-lg-4 arapeifont" style="font-size: 2vw">Check out our Menu!</a>
       </div>
       <div class="carousel-item active">
-        <img src="assets\menu\carousel\{{$picName}}1.jpg" class="d-block w-100 carouselpic" height="950vh" alt="...">
+        <img src="assets\menu\carousel\{{$picName}}1.jpg" class="d-block carouselpic" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="assets\menu\carousel\{{$picName}}2.jpg" class="d-block w-100 carouselpic" alt="...">
+        <img src="assets\menu\carousel\{{$picName}}2.jpg" class="d-block carouselpic" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="assets\menu\carousel\{{$picName}}3.jpg" class="d-block w-100 carouselpic" alt="...">
+        <img src="assets\menu\carousel\{{$picName}}3.jpg" class="d-block carouselpic" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
