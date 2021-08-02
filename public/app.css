@@ -1,7 +1,7 @@
 /*
         FONTS
 */
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Arbutus+Slab&family=Playfair+Display&family=Bebas+Neue&family=Otomanopee+One&family=Uchen&family=Cedarville+Cursive&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Battambang&family=Arapei&family=Caveat&family=Arbutus+Slab&family=Playfair+Display&family=Bebas+Neue&family=Otomanopee+One&family=Uchen&family=Cedarville+Cursive&family=Anton&display=swap');
 
 .bebasfont{font-family: Bebas Neue;}
 .playfairfont{font-family: Playfair Display;}
@@ -10,6 +10,10 @@
 .cursivefont{font-family: Cedarville Cursive;}
 .antonfont{font-family: Anton;}
 .arbutusslabfont{font-family: Arbutus Slab;}
+.caveatfont{font-family: Caveat;}
+.arapeifont{font-family: Arapei;}
+.battambangfont{font-family: Arapei;}
+
 
 /*
         MAIN

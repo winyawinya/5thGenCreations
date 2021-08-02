@@ -8,7 +8,7 @@
     </head>
     <body>
       <!-- navigation bar -->
-      <nav class="navbar playfairfont navbar-light bg-white sticky-top navbar-expand-lg rounded-3">
+      <nav class="navbar playfairfont navbar-light bg-white sticky-top navbar-expand-lg">
         <div class="container-lg">
           <a href="/" class="navbar-brand ms-3"><img src="assets\5thgen Logo.png" width="50vw" height="50vh" alt=""></a>
           <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -101,9 +101,9 @@
               <h5 class="card-title fw-bold">SUBSCRIBE</h5>
               <br>
               <p class="card-text">Receive product news and updates on your email</p>
-              <div class="d-flex"><input class="form-control" placeholder="Enter your email here..."><button class="btn btn-danger">
+              <div class="d-flex"><input class="form-control" placeholder="Enter your email here..."><a href="font" class="btn btn-danger">
                 <i class="fas fa-greater-than"></i>
-              </button></div>
+              </a></div>
             </div>
           </div>
         </div>

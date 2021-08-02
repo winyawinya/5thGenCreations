@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MenuController::class,'HomePage'])->where('menu', "[A-z_\-]+");
 Route::get('products', [MenuController::class,'MenuPage'])->where('menu', "[A-z_\-]+");
+Route::get('font', [MenuController::class, 'fonts']);
 
 
 //CART

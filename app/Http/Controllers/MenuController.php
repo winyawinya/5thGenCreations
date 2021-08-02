@@ -24,4 +24,9 @@ class MenuController extends Controller
         ]);
     }
 
+    public function fonts()
+    {
+        return view('font');
+    }
+
 }
