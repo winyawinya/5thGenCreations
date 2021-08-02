@@ -36,7 +36,7 @@ Route::post ('cart-add', [CartController::class,'addToCart'])->name('cartAdd');
 
 Route::get ('register', [AccountController::class, 'showRegister'])->middleware('guest');
 Route::post('register', [AccountController::class, 'register'])->middleware('guest');
-Route::get ('login', [AccountController::class, 'showLogin'])->middleware('guest');
+Route::get ('login', [AccountController::class, 'showLogin'])->middleware('guest')->name('login');
 Route::post ('login', [AccountController::class, 'login'])->middleware('guest');
 Route::get('logout',[AccountController::class, 'logout'])->middleware('auth');
 Route::get('profile',[AccountController::class, 'showProfile'])->middleware('auth');
