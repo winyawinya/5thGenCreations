@@ -4,12 +4,12 @@
   @endphp
 
 {{-- Preloader --}}
-  <link rel="stylesheet" href="loader/loader.css">
+  {{-- <link rel="stylesheet" href="loader/loader.css">
   <script src="loader/loader.js"></script>
   <div class="loader-body" id="loader">
+    <img src="assets\5thgen Logo.png" width="300px" height="300px" alt="" class="mb-5">
     <div class="loader"></div>
-    <img src="assets\5thgen Logo.png" width="400px" height="400px" alt="">
-  </div>
+  </div> --}}
 
 <!-- carousel -->
   <x-carousel :midButtons=TRUE :picName="$picName"/>  
