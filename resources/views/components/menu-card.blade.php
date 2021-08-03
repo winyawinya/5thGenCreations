@@ -41,12 +41,12 @@
                     <p class="card-text uchenfont">{{$item->description}}</p>
                         <p class="fw-bold mt-auto float-end">Starts at ₱{{$item->price}}</p>
                     @if ($item->stocks == 0)
-                        <button disabled class="btn btn-secondary">Out of Stock</button>
+                        <button disabled class="btn cardbtn">Out of Stock</button>
                     @else
                         @auth
-                            <a href="/" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#MenuModal{{$x}}">Add to Cart</a>
+                            <a href="/" class="btn cardbtn" data-bs-toggle="modal" data-bs-target="#MenuModal{{$x}}">Add to Cart</a>
                         @else
-                            <a href="/" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginKaMuna">Add to Cart</a>
+                            <a href="/" class="btn cardbtn" data-bs-toggle="modal" data-bs-target="#loginKaMuna">Add to Cart</a>
                         @endauth
                     @endif
                     

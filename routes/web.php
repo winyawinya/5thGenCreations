@@ -27,6 +27,7 @@ Route::get('font', [MenuController::class, 'fonts']);
 
 //CART
 
+
 Route::get('cart', [CartController::class,'showCart']);
 Route::post ('cart-remove', [CartController::class,'remove'])->name('remove');
 Route::post ('cart-add', [CartController::class,'addToCart'])->name('cartAdd');

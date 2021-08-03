@@ -43,9 +43,16 @@
     width: 100vw;
 }
 
-.card-body > .btn{
+.cardbtn{
+    color: white;
     background-color: #a82424;
     border: black;
+    
+}
+
+.cardbtn:hover{
+    color: white !important;
+    font-weight: bold;
 }
 
 .shadowText{
@@ -117,3 +124,5 @@ body{
 .longdiv{width: 100%; height: 15px;}
 
 .menurow{margin-bottom: 100px;}
+
+.h1style{color: #ffc372; text-shadow: 3px 3px 3px black;}

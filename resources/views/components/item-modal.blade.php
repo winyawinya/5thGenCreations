@@ -92,7 +92,7 @@
           @endif
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" data-bs-target="#cartSuccess" data-bs-toggle="modal" data-bs-dismiss="modal">
+            <button type="submit" class="btn cardbtn" data-bs-target="#cartSuccess" data-bs-toggle="modal" data-bs-dismiss="modal">
               Add to Cart
             </button>
         </div>

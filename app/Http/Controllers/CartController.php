@@ -13,7 +13,8 @@ class CartController extends Controller
     {
         
         return view('cart', [
-            'cart' => Cart::content()
+            'cart' => Cart::content(),
+            'total' => Cart::subtotal()
         ]);
     }
 

@@ -17,7 +17,7 @@
   <div class="container-fluid" style="background: #d8f3dc; height: 2.5vw;"></div>
 <!-- Bestsellers -->
   <div class="container-fluid py-5">
-    <h1 class="text-center otomanopeefont" style="color: #ffc372; text-shadow: 3px 3px 3px black;">BESTSELLERS</h1>
+    <h1 class="text-center otomanopeefont h1style">BESTSELLERS</h1>
     <div class="container py-5">
       <div class="row d-flex justify-content-center">
 
