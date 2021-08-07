@@ -10,6 +10,9 @@
     'arbutusslabfont',
     'caveatfont',
     'arapeifont',
+    'lorafont',
+    'gagalinfont',
+    'kaushanfont',
      ];   
 @endphp
 

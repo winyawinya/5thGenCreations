@@ -16,45 +16,54 @@
     @foreach ($menu as $item)
         
         @if ($withCategory == TRUE)
-            <!-- check for category, pag nagbago category, matik next row agad with label pa  -->
             @if($lastcategory !== $item->category)
-            <!-- check kung hindi eto yung unang category row, kasi pag hindi, iclose natin yung nauna bago tayo gumawa ng bagong row -->
                 @if ($lastcategory !== '')
                 </div>
                 @endif
-                <div class="longdiv" style="background: #89b0ae; height: 10px;"></div>
-                <h3 class="my-2">{{$item->category}}</h3>
-                <div class="container row menurow d-flex justify-content-center">
+                <h3 class="my-2 kaushanfont">{{$item->category}}</h3>
+                <div class="row menurow d-flex justify-content-center">
                 @php
                 $lastcategory = $item->category;   
                 @endphp
             @endif        
         @endif
-        
-        <!-- check kung duplicate name dahil may iba ibang variants. unang variant lang dapat magpapakita -->
         @if ($item->name !== $lastitem)
-            <div class="d-flex justify-content-between col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-10 my-3">
-                <div class="card mt-2">
-                    <img src="assets\menu\{{$item->name}}.jpg" class="card-img-top" alt="...">
-                    <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold bebasfont">{{$item->name}}</h5>
-                    <p class="card-text uchenfont">{{$item->description}}</p>
-                        <p class="fw-bold mt-auto float-end">Starts at ₱{{$item->price}}</p>
-                    @if ($item->stocks == 0)
-                        <button disabled class="btn cardbtn">Out of Stock</button>
-                    @else
-                        @auth
-                            <a href="/" class="btn cardbtn" data-bs-toggle="modal" data-bs-target="#MenuModal{{$x}}">Add to Cart</a>
-                        @else
-                            <a href="/" class="btn cardbtn" data-bs-toggle="modal" data-bs-target="#loginKaMuna">Add to Cart</a>
-                        @endauth
-                    @endif
-                    
+            <div class="col-xl-6 col-12 my-3 menu-card">
+                <div class="bg-white rounded-3 mt-2  border border-1" style="max-width: 780px; overflow: elipsis; border-color: #9aa7b2;">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <img src="assets\menu\{{$item->name}}.jpg" class="card-img" height="100%">
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="card-body">
+                                <div style="height: 13em;">
+                                <h5 class="card-title gagalinfont fs-3 mb-3" style="color: #54b8b6; text-shadow: 0 0 3px gray">{{$item->name}}</h5>
+                                    <p class="card-text lorafont me-xl-3 me-5" style="font-size: .75em;">{{$item->description}}</p>
+                                </div>
+                                <div class="d-flex mt-3">
+                                    <p class="fw-bold lorafont redtext mt-2">Starts at ₱{{$item->price}}</p>
+                                    @if ($item->stocks == 0)
+                                        <p class="text-secondary mt-2 ms-auto" style="font-size: .75em;">Out of Stock</p>
+                                        <a href="/" class="btn"><i class="fas fa-2x fa-heart"></i></a>
+                                    @else
+                                        <div class="d-flex ms-auto">
+                                        @auth
+                                            <a href="/" class="btn" data-bs-toggle="modal" data-bs-target="#MenuModal{{$x}}"><i class="fas fa-2x fa-shopping-bag"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-2x fa-heart"></i></a>
+                                        @else
+                                            <a href="/" class="btn" data-bs-toggle="modal" data-bs-target="#loginKaMuna"><i class="fas fa-2x fa-shopping-bag"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-2x fa-heart"></i></a>
+                                        @endauth
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                        </div> 
                     </div>
+                    <div class="longdiv redbg" style="height: 25px;"></div>
                 </div>
             </div>
             <x-item-modal :currentItem="$menu" :item="$item" :x="$x" />
-            
             @php
             $lastitem = $item->name;
             $x++;   

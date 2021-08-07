@@ -1,9 +1,9 @@
 <x-layout>
-  <div class="container maincontainer py-2">
-    <h1 class="fw-bold text-center mt-5 cursivefont">Our Products</h1>
-        <div class="container menubox p-5">   
+  <div class="p-5 bg-secondary">
+    <h1 class="fw-bold text-center m-3 gagalinfont">Products</h1>
+  </div>
+  <div class="container-fluid maincontainer py-2 px-5">
           <x-menu-card :menu="$menu" :limit=0 :withCategory=TRUE />
-        </div>
     </div>
   </div>
 </x-layout>

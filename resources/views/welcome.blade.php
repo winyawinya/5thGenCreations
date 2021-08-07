@@ -4,12 +4,12 @@
   @endphp
 
 {{-- Preloader --}}
-  <link rel="stylesheet" href="loader/loader.css">
+  {{-- <link rel="stylesheet" href="loader/loader.css">
   <script src="loader/loader.js"></script>
   <div class="loader-body" id="loader">
     <img src="assets\5thgen Logo.png" width="300px" height="300px" alt="" class="mb-5">
     <div class="loader"></div>
-  </div>
+  </div> --}}
 
 <!-- carousel -->
   <x-carousel :midButtons=TRUE :picName="$picName"/>  
@@ -18,12 +18,8 @@
 <!-- Bestsellers -->
   <div class="container-fluid py-5">
     <h1 class="text-center otomanopeefont h1style">BESTSELLERS</h1>
-    <div class="container py-5">
-      <div class="row d-flex justify-content-center">
-
+    <div class="container-fluid row d-flex justify-content-center py-5">
           <x-menu-card :menu="$new" :limit=3 :withCategory=FALSE/>
-        
-      </div>
     </div>
   </div>
 
