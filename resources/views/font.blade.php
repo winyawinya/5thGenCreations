@@ -13,6 +13,7 @@
     'lorafont',
     'gagalinfont',
     'kaushanfont',
+    'hammersmithfont',
      ];   
 @endphp
 

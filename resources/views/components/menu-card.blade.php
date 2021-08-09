@@ -44,15 +44,15 @@
                                     <p class="fw-bold lorafont redtext mt-2">Starts at ₱{{$item->price}}</p>
                                     @if ($item->stocks == 0)
                                         <p class="text-secondary mt-2 ms-auto" style="font-size: .75em;">Out of Stock</p>
-                                        <a href="/" class="btn"><i class="fas fa-2x fa-heart"></i></a>
+                                        <a href="/" class="btn redhover"><i class="fas fa-heart" style="font-size: 1.5em"></i></a>
                                     @else
                                         <div class="d-flex ms-auto">
                                         @auth
-                                            <a href="/" class="btn" data-bs-toggle="modal" data-bs-target="#MenuModal{{$x}}"><i class="fas fa-2x fa-shopping-bag"></i></a>
-                                            <a href="#" class="btn"><i class="fas fa-2x fa-heart"></i></a>
+                                            <a href="/" class="btn" data-bs-toggle="modal" data-bs-target="#MenuModal{{$x}}"><i class="fas fa-shopping-bag" style="font-size: 1.5em"></i></a>
+                                            <a href="#" class="btn"><i class="fas fa-heart" style="font-size: 1.5em"></i></a>
                                         @else
-                                            <a href="/" class="btn" data-bs-toggle="modal" data-bs-target="#loginKaMuna"><i class="fas fa-2x fa-shopping-bag"></i></a>
-                                            <a href="#" class="btn"><i class="fas fa-2x fa-heart"></i></a>
+                                            <a href="/" class="btn" data-bs-toggle="modal" data-bs-target="#loginKaMuna"><i class="fas fa-shopping-bag" style="font-size: 1.5em"></i></a>
+                                            <a href="#" class="btn redhover"><i class="fas fa-heart" style="font-size: 1.5em"></i></a>
                                         @endauth
                                         </div>
                                     @endif

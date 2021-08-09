@@ -1,27 +1,26 @@
 <!DOCTYPE html>
     <head>
-        <title>5thGen Creations</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="/app.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>5thGen Creations</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+      <script src="https://use.fontawesome.com/26a6967f0b.js"></script>
+      <link rel="stylesheet" href="/app.css">
     </head>
     <body>
       <!-- navigation bar -->
-      <nav class="navbar playfairfont navbar-light bg-white sticky-top navbar-expand-lg">
-        <div class="container-lg">
-          <a href="/" class="navbar-brand ms-3"><img src="assets\5thgen Logo.png" width="50vw" height="50vh" alt=""></a>
+      <nav class="navbar hammersmithfont navbar-light bg-white sticky-top navbar-expand-lg">
+        <div class="container">
+          <a href="/" class="navbar-brand me-5"><img src="assets\5thgen Logo.png" width="100rem" height="100rem" alt=""></a>
           <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="navbar-collapse collapse" id="navbar">
             <ul class="navbar-nav text-center">
-              <li class="nav-item ms-0 ms-md-0 ms-lg-3 ms-xl-3 ms-xxl-3"><a href="/" class="nav-link">HOME</a></li>
-              <li class="nav-item ms-0 ms-md-0 ms-lg-3 ms-xl-3 ms-xxl-3"><a href="/products" class="nav-link">PRODUCTS </a></li>
-              @auth
-              <li class="nav-item ms-0 ms-md-0 ms-lg-3 ms-xl-3 ms-xxl-3"><a href="/cart" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
-              @endauth
+              <li class="nav-item ms-0 ms-lg-3"><a href="/" class="nav-link">HOME</a></li>
+              <li class="nav-item ms-0 ms-lg-3"><a href="/products" class="nav-link">PRODUCTS </a></li>
             </ul>
             <ul class="navbar-nav login text-center ms-auto me-lg-3">
               <li class="nav-item">
@@ -35,21 +34,24 @@
                   @endif
                 @endguest
               </li>
-              <li class="nav-item ms-0 ms-sm-0 ms-md-0 ms-lg-3 ms-xl-3 ms-xxl-3">
+              <li class="nav-item ms-0 ms-lg-3">
                 @guest
                   <a href="/register" class="nav-link">REGISTER</a>
                 @else
                   <a href="/logout" class="nav-link">LOGOUT</a>
                 @endguest
+                @auth
+                  <li class="nav-item ms-0 ms-lg-3"><a href="/cart" class="nav-link"><i class="fas fa-shopping-bag"></i></a></li>
+                @endauth
               </li>
             </ul>
-            <form class="d-flex justify-content-center" action="/products" method="GET">
-              <input class="form-control searchbar pe-5" type="text" name="search" placeholder="SEARCH" aria-label="Search" value="{{request('search')}}">
-              <button class="btn searchbutton" type="submit"><i class="fas fa-search"></i></button>
+            <form class="d-flex justify-content-center align-items-center flex-row" action="/products" method="GET">
+              <input class="form-control searchbar" type="text" name="search" placeholder="&#xF002; SEARCH" aria-label="Search" value="{{request('search')}}">
             </form>
           </div>
         </div> 
       </nav>
+
       {{ $slot }}
       
     </body>
