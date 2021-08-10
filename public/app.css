@@ -1,9 +1,12 @@
 /*
         FONTS
 */
-@font-face {font-family: Gagalin; src: url('assets/fonts/Gagalin-Regular.ttf');}
-@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Kaushan+Script&family=Gagalin&family=Lora&family=Battambang&family=Arapei&family=Caveat&family=Arbutus+Slab&family=Playfair+Display&family=Bebas+Neue&family=Otomanopee+One&family=Uchen&family=Cedarville+Cursive&family=Anton&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Kaushan+Script&family=Gagalin&family=Lora&family=Battambang&family=Arapei&family=Caveat&family=Arbutus+Slab&family=Playfair+Display&family=Bebas+Neue&family=Otomanopee+One&family=Uchen&family=Cedarville+Cursive&family=Anton&display=swap');
+@font-face {
+    font-family: Gagalin;
+    src: url('assets/fonts/Gagalin-Regular.ttf');
+  }
 .bebasfont{font-family: Bebas Neue;}
 .playfairfont{font-family: Playfair Display;}
 .otomanopeefont{font-family: Otomanopee One;}
