@@ -1,9 +1,8 @@
 /*
         FONTS
 */
+@font-face {font-family: Gagalin; src: url(assets/fonts/Gagalin-Regular.otf);}
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Kaushan+Script&family=Gagalin&family=Lora&family=Battambang&family=Arapei&family=Caveat&family=Arbutus+Slab&family=Playfair+Display&family=Bebas+Neue&family=Otomanopee+One&family=Uchen&family=Cedarville+Cursive&family=Anton&display=swap');
-@import url('http://fonts.cdnfonts.com/css/gagalin');
-
 
 .bebasfont{font-family: Bebas Neue;}
 .playfairfont{font-family: Playfair Display;}
@@ -16,9 +15,9 @@
 .arapeifont{font-family: Arapei;}
 .battambangfont{font-family: Arapei;}
 .lorafont{font-family: Lora;}
-.gagalinfont{font-family: 'Gagalin', sans-serif;}
+.gagalinfont{font-family: Gagalin;}
 .kaushanfont{font-family: Kaushan Script;}
-.hammersmithfont{font-family: 'Hammersmith One', sans-serif;}
+.hammersmithfont{font-family: Hammersmith One;}
 
 
 
