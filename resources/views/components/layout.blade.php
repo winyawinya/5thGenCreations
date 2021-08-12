@@ -35,7 +35,7 @@
               <li class="nav-item me-lg-3"><a href="/cart" class="nav-link"><i class="fas fa-shopping-bag navicon"></i></a></li>
               @if (auth()->user()->isAdmin)
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link" id="adminProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user-shield navicon"></i></a>
+                  <a href="#" class="nav-link" id="adminProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user-shield fa-fw navicon"></i></a>
                   <ul class="dropdown-menu" aria-labelledby="adminProfile">
                     <li><a class="dropdown-item" href="/admin">Admin Panel</a></li>
                     <li><a class="dropdown-item" href="#">Favorites</a></li>
@@ -45,7 +45,7 @@
                 </li>
               @else
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link" id="userProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user navicon"></i></a>
+                  <a href="#" class="nav-link" id="userProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw navicon"></i></a>
                   <ul class="dropdown-menu" aria-labelledby="userProfile">
                     <li><a class="dropdown-item" href="/profile">Profile</a></li>
                     <li><a class="dropdown-item" href="#">Favorites</a></li>
@@ -62,7 +62,7 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid longdiv" style="background: #4fd6ef; height: 10px; position: fixed; z-index: 3;"></div> 
+    <div class="container-fluid longdiv" style="background: #4fd6ef; height: 10px; position: fixed; z-index: 21;"></div> 
     
 
     {{ $slot }}
