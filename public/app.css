@@ -28,10 +28,31 @@
         MAIN
 */
 
+
+
+/* ----------BACKGROUNDS---------- */
+
+.productpage{
+    background: url("assets/tiles.png") fixed no-repeat center;
+    background-size: cover;
+}
+.homepage{
+    background: url("assets/logopattern.png") fixed;
+    background-size: contain;
+}
+.bestsellers{
+    background: url("assets/bestseller.png") fixed no-repeat center;
+    background-size: cover;
+}
+
+
+
+/* ----------CAROUSEL---------- */
+
 .carouselbuttons > button{
     background-color: #54b8b7 !important;
-    height: 15px!important;
-    width: 15px!important;
+    height: 1.5vw!important;
+    width: 1.5vw!important;
     border-radius: 50% !important; 
 }
 
@@ -52,11 +73,13 @@
 }
 
 
+
+/* ----------CARD---------- */
+
 .cardbtn{
     color: white;
     background-color: #a82424;
     border: black;
-    
 }
 
 .cardbtn:hover{
@@ -64,28 +87,23 @@
     font-weight: bold;
 }
 
-.card-img{
-    object-fit: cover;
-}
-
-.shadowText{
-    text-shadow: 10px 3px black;
-}
+.card-img{object-fit: cover;}
 
 
-/*  FOOTER */
+
+/*  ----------FOOTER---------- */
 .footer{
     background-color: black;
     color: white;
 }
 
-.footer .card-text{
-    font-size: 15px;
-}
+.footer .card-text{font-size: 15px;}
 
-/* NAVBAR */
+
+
+/* ----------NAVBAR---------- */
 .navbar{
-    font-size: 13px; 
+    font-size: 17.5px; 
     padding: 0;
 }
 
@@ -110,10 +128,6 @@
     transform: scale(1.25);
 }
 
-.nav-link:hover::after{
-    width: 100%;
-}
-
 .searchbar{
     border: 1.5px solid #9aa7b2 !important;
     box-shadow: 4px 4px 2px #9aa7b2;
@@ -123,28 +137,25 @@
     font-family:'Hammersmith One', sans-serif, FontAwesome;
 }
 
+.nav-link:hover::after{width: 100%;}
+.navicon{font-size: 1.5rem;}
+
+
+
+
+
+
 /*
         OTHERS
 */
 
-a {color: inherit; text-decoration: none;} 
-
-.productpage{
-    background: url("assets/tiles.png") fixed no-repeat center;
-    background-size: cover;
-}
-.homepage{
-    background: url("assets/logopattern.png") fixed;
-    background-size: contain;
-}
-.bestsellers{
-    background: url("assets/bestseller.png") fixed no-repeat center;
-    background-size: cover;
-}
-
 .redtext{color: #a72321}
 .redbg{background-color: #a72321}
 .redhover:hover{color: #a72321}
+
+.shadowText{text-shadow: 10px 3px black;}
+
+a {color: inherit; text-decoration: none;}
 
 .longdiv{width: 100%; height: 15px;}
 
