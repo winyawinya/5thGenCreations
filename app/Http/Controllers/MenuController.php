@@ -51,7 +51,6 @@ class MenuController extends Controller
     {
         $user = Auth::user()->favorites;
         $faveID = explode(',',$user);
-        dd($faveID);
         return view('favorites',[
             'faves' => $faveID,
             'menu' => Menu::orderBy('id', 'ASC')->get()
