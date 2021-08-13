@@ -14,10 +14,11 @@ class MenuController extends Controller
 
     public function HomePage()
     {
-        $faveID = [];
         if(Auth::check()){
             $user = Auth::user()->favorites;
             $faveID = explode(',',$user);
+        }else{
+            $faveID = [];
         }
         return view('welcome', [
             'faves' => $faveID,
@@ -28,10 +29,12 @@ class MenuController extends Controller
 
     public function MenuPage()
     {
-        $faveID = [];
+        
         if(Auth::check()){
             $user = Auth::user()->favorites;
             $faveID = explode(',',$user);
+        }else{
+            $faveID = [];
         }
         return view('menu', [
             'faves' => $faveID,
@@ -48,6 +51,7 @@ class MenuController extends Controller
     {
         $user = Auth::user()->favorites;
         $faveID = explode(',',$user);
+        dd($faveID);
         return view('favorites',[
             'faves' => $faveID,
             'menu' => Menu::orderBy('id', 'ASC')->get()
