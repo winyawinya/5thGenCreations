@@ -22,7 +22,7 @@ class MenuController extends Controller
         }
         return view('welcome', [
             'faves' => $faveID,
-            'new' => Menu::orderBy('category', 'DESC')->orderBy('name', 'DESC')->orderBy('created_at', "ASC")->get()
+            'new' => Menu::orderBy('category', 'DESC')->orderBy('created_at', 'DESC')->orderBy('name', "ASC")->orderBy('id', "ASC")->get()
         ]); 
     }
 
