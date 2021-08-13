@@ -14,8 +14,11 @@ class MenuController extends Controller
 
     public function HomePage()
     {
-        $user = Auth::user()->favorites;
-        $faveID = explode(',',$user);
+        $faveID = [];
+        if(Auth::check()){
+            $user = Auth::user()->favorites;
+            $faveID = explode(',',$user);
+        }
         return view('welcome', [
             'faves' => $faveID,
             'new' => Menu::orderBy('category', 'DESC')->orderBy('name', 'DESC')->orderBy('created_at', "ASC")->get()
@@ -25,8 +28,11 @@ class MenuController extends Controller
 
     public function MenuPage()
     {
-        $user = Auth::user()->favorites;
-        $faveID = explode(',',$user);
+        $faveID = [];
+        if(Auth::check()){
+            $user = Auth::user()->favorites;
+            $faveID = explode(',',$user);
+        }
         return view('menu', [
             'faves' => $faveID,
             'menu' => Menu::filter(request(['search']))->orderBy('category', 'DESC')->orderBy('name', 'DESC')->get()
