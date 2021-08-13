@@ -15,7 +15,7 @@
         <h1 class="fw-bold text-center m-3 gagalinfont">Favorites</h1>
     </div>
     <div class="container py-5"> 
-    @if (empty($faveCards[]))
+    @if (empty($faveCards))
         <div class="container card w-75 pb-4">
             <div class="d-flex justify-content-center">
                 <i class="fas fa-heart fa-10x mt-5"></i>
