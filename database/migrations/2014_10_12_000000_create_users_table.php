@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('isAdmin');
             $table->rememberToken();
             $table->timestamps();
+            $table->text('favorites')->nullable();
         });
     }
 

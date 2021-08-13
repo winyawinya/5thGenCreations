@@ -20,7 +20,7 @@
   <div class="container py-5 bestsellers">
     <h1 class="text-center otomanopeefont h1style">BESTSELLERS</h1>
     <div class="  row d-flex justify-content-center py-5">
-          <x-menu-card :menu="$new" :limit=3 :withCategory=FALSE/>
+          <x-menu-card :menu="$new" :limit=3 :withCategory=FALSE :faves=$faves/>
     </div>
   </div>
 

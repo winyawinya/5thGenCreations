@@ -27,7 +27,6 @@ Route::get('font', [MenuController::class, 'fonts']);
 
 //CART
 
-
 Route::get('cart', [CartController::class,'showCart']);
 Route::post ('cart-remove', [CartController::class,'remove'])->name('remove');
 Route::post ('cart-add', [CartController::class,'addToCart'])->name('cartAdd');
@@ -51,3 +50,7 @@ Route::get('admin-all-products',[AdminController::class, 'adminAllProducts'])->m
 Route::get('admin-out-products',[AdminController::class, 'adminOutProducts'])->middleware('admin');
 Route::get('admin-edit-products',[AdminController::class, 'adminEditProducts'])->middleware('admin');
 Route::post('post-edit-products',[AdminController::class, 'submitEditProducts'])->middleware('admin')->name('afterEdit');
+
+//FAVORITES
+Route::post('favorites', [MenuController::class,'changeFave'])->middleware('auth');
+Route::get('favorites', [MenuController::class,'favorites'])->middleware('auth');

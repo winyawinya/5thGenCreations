@@ -151,7 +151,11 @@
 
 .redtext{color: #a72321}
 .redbg{background-color: #a72321}
-.redhover:hover{color: #a72321}
+
+.favorite{color: black}
+.favorite:hover{color: #a72321}
+.unfavorite{color: #a72321}
+.unfavorite:hover{color: black}
 
 .shadowText{text-shadow: 10px 3px black;}
 
@@ -160,5 +164,6 @@ a {color: inherit; text-decoration: none;}
 .longdiv{width: 100%; height: 15px;}
 
 .menurow{margin-bottom: 100px;}
+.menuicon{font-size: 2rem;}
 
 .h1style{color: #ffc372; text-shadow: 3px 3px 3px black;}
