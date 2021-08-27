@@ -14,6 +14,7 @@
     'gagalinfont',
     'kaushanfont',
     'hammersmithfont',
+    'playlistfont',
      ];   
 @endphp
 

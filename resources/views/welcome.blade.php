@@ -15,26 +15,28 @@
 <!-- carousel -->
   <x-carousel :midButtons=TRUE :picName="$picName"/>  
   <div class="container-fluid" style="background: #a82424; height: 2.5vw;"></div>
-  <div class="container-fluid" style="background: #d8f3dc; height: 2.5vw;"></div>
 <!-- Bestsellers -->
-  <div class="container py-5 bestsellers">
-    <h1 class="text-center otomanopeefont h1style">BESTSELLERS</h1>
-    <div class="  row d-flex justify-content-center py-5">
-          <x-menu-card :menu="$new" :limit=3 :withCategory=FALSE :faves=$faves/>
+  <div class="container p-5 bg-white">
+    <h1 class="text-center playlistfont">Bestsellers</h1>
+    <div class="container bestsellers pt-5">
+      <div class="row px-5">
+        <x-menu-card :menu="$new" :limit=3 :withCategory=FALSE :faves=$faves :alternate=TRUE/>
+      </div>
     </div>
   </div>
 
-  <div class="container-fluid p-5 rounded-3" style="background: #d8f3dc; color: #ffc372;">
-    <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
-    <div class="container-fluid py-5">
-      <h1 class="fw-bold shadowText antonfont" style="font-size: 8vmax;">
-        'PASTRIES <br> 
-        LOVED BY <br> 
-        EVERY <br> 
-        GENERATION.'
-      </h1>
-    </div>
-    <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
+</div>
+
+<div class="container-fluid p-5 rounded-3" style="background: #d8f3dc; color: #ffc372;">
+  <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
+  <div class="container-fluid py-5">
+    <h1 class="fw-bold shadowText antonfont" style="font-size: 8vmax;">
+      'PASTRIES <br> 
+      LOVED BY <br> 
+      EVERY <br> 
+      GENERATION.'
+    </h1>
   </div>
+  <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
 </div>
 </x-layout>

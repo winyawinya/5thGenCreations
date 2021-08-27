@@ -16,17 +16,11 @@
     </div>
     <div class="container py-5"> 
     @if (empty($faveCards))
-        <div class="container card w-75 pb-4">
-            <div class="d-flex justify-content-center">
-                <i class="fas fa-heart fa-10x mt-5"></i>
-                
-            </div>
-            <p class="text-center fs-1 my-5">Your favorites list is currently empty!</p>
-            <a href="/products" class="btn cardbtn mt-4 fs-4 rounded-pill w-100">Return to Products</a>
-        </div>
+        @php $page = 'favorites'; @endphp
+        <x-empty-note :page="$page" />
     @else
         <div class="row justify-content-center px-3">
-            <x-menu-card :menu="$faveCards" :limit=0 :withCategory=FALSE :faves=$faves />
+            <x-menu-card :menu="$faveCards" :limit=0 :withCategory=FALSE :faves=$faves :alternate=FALSE />
         </div>
     @endif
     </div>

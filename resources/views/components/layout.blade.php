@@ -33,10 +33,9 @@
             </li>
             @endguest
             @auth
-              <li class="nav-item me-lg-3"><a href="/cart" class="nav-link"><i class="fas fa-shopping-bag navicon"></i></a></li>
               @if (auth()->user()->isAdmin)
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link" id="adminProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user-shield fa-fw navicon"></i></a>
+                  <a href="#" class="nav-link" id="adminProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user-shield navicon"></i></a>
                   <ul class="dropdown-menu" aria-labelledby="adminProfile">
                     <li><a class="dropdown-item" href="/admin">Admin Panel</a></li>
                     <li><a class="dropdown-item" href="#">Favorites</a></li>
@@ -46,15 +45,18 @@
                 </li>
               @else
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link" id="userProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw navicon"></i></a>
+                  <a href="#" class="nav-link" id="userProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user navicon me-2"></i>HI, {{strtoupper(auth()->user()->name)}}</a>
                   <ul class="dropdown-menu" aria-labelledby="userProfile">
-                    <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                    <li><a class="dropdown-item" href="/favorites">Favorites</a></li>
+                    <li><a class="dropdown-item" href="/profile"><i class="fas fa-address-card navicon me-1"></i>My Profile</a></li>
+                    <li><a class="dropdown-item" href="/address"><i class="fas fa-map-marked-alt navicon me-1"></i>My Addresses</a></li>
+                    <li><a class="dropdown-item" href="/track"><i class="fas fa-truck navicon me-1"></i>Order Tracker</a></li>
+                    <li><a class="dropdown-item" href="/favorites"><i class="fas fa-heart navicon me-1"></i>Favorites</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="/logout">Logout</a></li>
                   </ul>
                 </li>
               @endif
+              <li class="nav-item ms-lg-4"><a href="/cart" class="nav-link"><i class="fas fa-shopping-bag navicon me-2"></i>CART</a></li>
             @endauth
             <form class="d-flex justify-content-center align-items-center flex-row ms-lg-3" action="/products" method="GET">
               <input class="form-control searchbar" type="text" name="search" placeholder="&#xF002; SEARCH" aria-label="Search" value="{{request('search')}}">

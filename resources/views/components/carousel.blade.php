@@ -19,29 +19,22 @@
     <div class="carousel-inner">
       <!-- NOTE! Kung iibahin niyo yung carousel images, iresize niyo yung MISMONG image na ipapalit gamit MS Paint. -->
       <!-- yung ginawa ko is HEIGHT = 1200px and WIDTH = 450px, kung gusto niyo ibahin size make sure pareparehas ng size lahat. -->
-      <div class="carousel-content caveatfont">
-        <h1 style="font-size: 8vw;">
-          Welcome <br>
-          To <br></h1>
-          <h1 style="font-size: 8vw;">5thgen Creations!</h1>
-        <a href="/products" class="btn btn-danger mt-lg-4 arapeifont" style="font-size: 2vw">Check out our Menu!</a>
+      <div class="carousel-content playlistfont">
+        
+        <h1>Welcome<img src="assets\paint (2).png" class="splashpaint" style="top: -20%; left: -75%;"></h1>
+        <h1>To<img src="assets\paint (2).png" class="splashpaint" style="top: 7%; left: -110%;"></h1>
+        <h1>5thgen Creations!<img src="assets\paint (2).png" class="splashpaint" style="top: 30%; left: -55%; height: 10em;"></h1>
+        <a href="/products" class="btn btn-danger mt-4 gagalinfont" style="font-size: 1.5em">Check out our Menu!</a>
+
       </div>
       <div class="carousel-item active">
-        <img src="assets\menu\carousel\{{$picName}} (1).jpg" class="d-block carouselpic" alt="...">
+        <img src="assets\menu\carousel\{{$picName}} (1).jpg" class="d-block carouselpic">
       </div>
       <div class="carousel-item">
-        <img src="assets\menu\carousel\{{$picName}} (2).jpg" class="d-block carouselpic" alt="...">
+        <img src="assets\menu\carousel\{{$picName}} (2).jpg" class="d-block carouselpic">
       </div>
       <div class="carousel-item">
-        <img src="assets\menu\carousel\{{$picName}} (3).jpg" class="d-block carouselpic" alt="...">
+        <img src="assets\menu\carousel\{{$picName}} (3).jpg" class="d-block carouselpic">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>

@@ -28,16 +28,17 @@ Route::get('font', [MenuController::class, 'fonts']);
 //CART
 
 Route::get('cart', [CartController::class,'showCart']);
-Route::post ('cart-remove', [CartController::class,'remove'])->name('remove');
-Route::post ('cart-add', [CartController::class,'addToCart'])->name('cartAdd');
+Route::post('cart-remove', [CartController::class,'remove'])->name('remove');
+Route::post('cart-add', [CartController::class,'addToCart'])->name('cartAdd');
+Route::get('checkout', [CartController::class, 'checkout'])->name('checkout');
 
 
 //LOGIN AND REGISTER
 
 Route::get ('register', [AccountController::class, 'showRegister'])->middleware('guest');
 Route::post('register', [AccountController::class, 'register'])->middleware('guest');
-Route::get ('login', [AccountController::class, 'showLogin'])->middleware('guest')->name('login');
-Route::post ('login', [AccountController::class, 'login'])->middleware('guest');
+Route::get('login', [AccountController::class, 'showLogin'])->middleware('guest')->name('login');
+Route::post('login', [AccountController::class, 'login'])->middleware('guest');
 Route::get('logout',[AccountController::class, 'logout'])->middleware('auth');
 Route::get('profile',[AccountController::class, 'showProfile'])->middleware('auth');
 Route::get('edit-profile',[AccountController::class, 'editProfile'])->middleware('auth');
