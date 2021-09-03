@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/26a6967f0b.js"></script>
     <link rel="stylesheet" href="/app.css">
+    @livewireStyles
   </head>
   <body>
     <!-- navigation bar -->
@@ -70,6 +71,7 @@
 
     {{ $slot }}
     
+    @livewireScripts
   </body>
   <!-- footer -->
   <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
