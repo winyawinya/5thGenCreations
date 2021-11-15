@@ -33,7 +33,7 @@
             </div>
             <div class="card-footer bg-white">
               <div class="d-flex justify-content-between"><p class="fs-3">Total</p class="fs-3"><p class="fs-3">₱{{$total}}</p class="fs-3"></div>
-              <a href="{{route('checkout')}}" class="btn cardbtn rounded-pill w-100 mt-4 fs-4">Checkout</a>
+              <a href="checkout" class="btn cardbtn rounded-pill w-100 mt-4 fs-4">Checkout</a>
             </div>
           </div>
         </div>

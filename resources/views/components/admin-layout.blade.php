@@ -70,17 +70,15 @@
                                     <a class="nav-link" href="/admin-out-products">Out of Stock Products</a>
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed {{$ord}}" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link collapsed {{$ord}}" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-receipt"></i></div>
                                 Orders
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                <div class="sb-sidenav-collapse-arrow"></div>
                             </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="#">Pending Orders</a>
-                                    <a class="nav-link" href="#">Completed Orders</a>
-                                </nav>
-                            </div>
+                            <a class="nav-link" href="view-register.php">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                                Registered Users
+                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

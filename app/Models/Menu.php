@@ -15,7 +15,7 @@ class Menu extends Model
     {
         if ($filters['search'] ?? false) {
             $query
-            ->where('name', 'ilike', '%' . $filters['search'] . '%');
+            ->where('name', 'like', '%' . $filters['search'] . '%');
         }
     }
     

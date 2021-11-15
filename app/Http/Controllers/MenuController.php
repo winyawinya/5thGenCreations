@@ -74,4 +74,11 @@ class MenuController extends Controller
         $user->save();
         return redirect('/favorites');
     }
+
+    public function checkout()
+    {
+        return view('checkout',['user'=> Auth::user()
+    ]);
+    }
+
 }

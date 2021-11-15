@@ -45,4 +45,9 @@ class CartController extends Controller
         ]);
     }
 
+    public function placeorder()
+    {
+        return view('checkout',['user'=> Auth::user()
+    ]);
+    }
 }

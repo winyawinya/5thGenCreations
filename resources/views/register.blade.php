@@ -69,12 +69,32 @@
                                 <div id="birthdayError" class="form-text text-danger">{{$message}}</div>
                             @enderror
                         </div>
+                        <br/>
+
+               
+                        <div class="g-recaptcha" data-sitekey="{{config('services.recaptcha.key')}}"></div>
+                        @if(Session::has('g-recaptcha-response'))
+                        <p class="alert {{Session::get('alert-class', 'alert-info')}}">
+                        {{Session::get('g-recaptcha-response')}}
+                        </p>
+                        @endif
+                        <br/><br/>
+                     
+                        
+                        
                         <div class="d-flex pb-4 align-items-center justify-content-end">
-                            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                           
+                           <button type="submit" class="btn btn-primary btn-lg">Register</button>
                         </div>
                     </div>
                 </form>
+            
             </div>
+            <script type="text/javascript">
+                var onloadCallback = function() {
+                  alert("grecaptcha is ready!");
+                };
+              </script>
         </div>
     </div>
 </x-layout>

@@ -17,10 +17,7 @@ class adminOnly
     public function handle(Request $request, Closure $next)
     {
 
-        if (auth()->user()?->isAdmin != 1) {
-            abort(403);
-        }
-
+        
         return $next($request);
     }
 }

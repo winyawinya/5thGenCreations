@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <div class="row justify-content-center antonfont">
+        <div class="row justify-content-center playfairfont">
             <div class="col-md-8 col-lg-8 col-xl-8 col-12 my-5 px-5 rounded-3 shadow-lg" style="
             background: #a0eaf8; 
             font-weight: bold;
