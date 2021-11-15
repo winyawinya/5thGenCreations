@@ -59,8 +59,6 @@
                   <a href="#" class="nav-link" id="userProfile" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user navicon me-2"></i>HI, {{strtoupper(auth()->user()->name)}}</a>
                   <ul class="dropdown-menu" aria-labelledby="userProfile">
                     <li><a class="dropdown-item" href="/profile"><i class="fas fa-address-card navicon me-1"></i>My Profile</a></li>
-                    <li><a class="dropdown-item" href="/address"><i class="fas fa-map-marked-alt navicon me-1"></i>My Addresses</a></li>
-                    <li><a class="dropdown-item" href="/track"><i class="fas fa-truck navicon me-1"></i>Order Tracker</a></li>
                     <li><a class="dropdown-item" href="/favorites"><i class="fas fa-heart navicon me-1"></i>Favorites</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="/logout">Logout</a></li>
