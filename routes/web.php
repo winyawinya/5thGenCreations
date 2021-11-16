@@ -60,3 +60,6 @@ Route::get('favorites', [MenuController::class,'favorites'])->middleware('auth')
 
 //CHECKOUT
 Route::get('checkout',[MenuController::class, 'checkout'])->middleware('auth');
+
+//THANKYOU
+Route::get('thankyou',[MenuController::class, 'thankyou'])->middleware('auth');

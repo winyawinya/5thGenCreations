@@ -83,7 +83,6 @@ class CheckoutComponent extends Component
             $transaction->status = 'pending';
             $transaction->save();
         }
- 
         $this->thankyou = 1;
         Cart::intance('cart')->destroy();
         session()->forget('checkout');
@@ -103,11 +102,13 @@ class CheckoutComponent extends Component
         {
             return redirect()->route('cart');
         }
-    }
-    
+    }     
+
     public function render()
     {
-        $this->verifyForCheckout();
+        $this->verifyForCheckout();        
         return view('livewire.checkout-component')->layout('layouts.base');
     }
+
+
 }

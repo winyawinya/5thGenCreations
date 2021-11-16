@@ -10,10 +10,10 @@
                     @csrf
                     <div class="px-5">
                         <div class="my-3 pt-5 text-center">
-                            <h1 class="fw-bold antonfont">REGISTER</h1>
+                            <h1 class="fw-bold playfairfont">REGISTER</h1>
                         </div>
                         <div class="mb-3">
-                            <label for="name" class="form-label fs-3 antonfont">Name:</label>
+                            <label for="name" class="form-label fs-3 playfairfont">Name:</label>
                             <input type="text" class="form-control" id="name" aria-describedby="nameError" value="{{old('name')}}" 
                             name="name">
                             @error('name')
@@ -21,7 +21,7 @@
                             @enderror
                         </div>
                         <div class="mb-3"> 
-                            <label for="email" class="form-label fs-3 antonfont">Email address:</label>
+                            <label for="email" class="form-label fs-3 playfairfont">Email address:</label>
                             <input type="email" class="form-control" id="email" aria-describedby="emailError" value="{{old('email')}}" 
                             name="email">
                             @error('email')
@@ -29,7 +29,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label fs-3 antonfont">Password:</label>
+                            <label for="password" class="form-label fs-3 playfairfont">Password:</label>
                             <input type="password" class="form-control" id="password" aria-describedby="passError" 
                             name="password">
                             @error('password')
@@ -37,7 +37,7 @@
                             @enderror 
                         </div>
                         <div class="mb-3">
-                            <label for="password_confirmation" class="form-label fs-3 antonfont">Confirm Password:</label>
+                            <label for="password_confirmation" class="form-label fs-3 playfairfont">Confirm Password:</label>
                             <input type="password" class="form-control" id="password_confirmation" aria-describedby="pass2Error"
                             name="password_confirmation">
                             @error('password')
@@ -45,7 +45,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="address" class="form-label fs-3 antonfont">Address:</label>
+                            <label for="address" class="form-label fs-3 playfairfont">Address:</label>
                             <input type="text" class="form-control" id="address" aria-describedby="addressError" value="{{old('address')}}"
                             name="address">
                             @error('address')
@@ -53,7 +53,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="phone_number" class="form-label fs-3 antonfont">Phone Number:</label>
+                            <label for="phone_number" class="form-label fs-3 playfairfont">Phone Number:</label>
                             <input type="tel" class="form-control" id="phone_number" aria-describedby="phone_numberError" 
                             value="{{old('phone_number')}}" pattern="[0]{1}[9]{1}[0-9]{9}" placeholder="ex:09XXXXXXXXX"
                             name="phone_number">
@@ -62,7 +62,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="birthday" class="form-label fs-3 antonfont">Date of Birth:</label>
+                            <label for="birthday" class="form-label fs-3 playfairfont">Date of Birth:</label>
                             <input type="date" class="form-control" id="birthday" aria-describedby="birthdayError" value="{{old('birthday')}}"
                             name="birthday">
                             @error('birthday')

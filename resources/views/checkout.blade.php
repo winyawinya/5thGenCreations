@@ -69,20 +69,20 @@
                                                 <td>{{$cartItem->name}}</td>
                                                 <td>{{$cartItem->qty}}</td>
                                                 <td>{{$cartItem->price}}</td>
-                                                <td>{{($cartItem->price)*($cartItem->qty)}}</td>
+                                                <td>₱{{($cartItem->price)*($cartItem->qty)}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>
                                         <thead>
                                             <tr>
                                                  <th>Total<th>
-                                                 <td><td>{{$total}}</td></td>
+                                                 <td><td>₱{{$total}}</td></td>
                                             </tr>
                                         </thead>
                                        
                                     </table>
                                     <hr>
-                                    <a href="thankyou" class="btn btn-primary float-end">Place Order</a>
+                                    <a href="thankyou" class="btn cardbtn rounded-pill w-100 mt-4 fs-4">Place Order</a>
                                 </div>
                             </div>
                         </div>

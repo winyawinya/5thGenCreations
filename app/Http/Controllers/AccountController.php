@@ -78,9 +78,8 @@ class AccountController extends Controller
                 ]);
                 $user = User::create($userInfo);
                 return redirect('/login')->with('registered', 'Your account has been created. Log in now to order!');
-                
+                        
     }
-
     public function showProfile()
     {
 

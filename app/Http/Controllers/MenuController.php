@@ -83,5 +83,9 @@ class MenuController extends Controller
     ]);
     }
 
-
+    public function thankyou()
+    {
+        return view('thankyou',['user'=> Auth::user()
+    ]);
+    }
 }
