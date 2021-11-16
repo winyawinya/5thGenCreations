@@ -43,8 +43,24 @@
                                       <input name="payment-method" id="payment-method-cod" value="cod" type="radio">
                                          <span> Cash on Delivery </span>
                                       </label><br>
-                                @error('paymentmode') <span class="text-danger">{{$message}} </span> @enderror
+                                    @error('paymentmode') <span class="text-danger">{{$message}} </span> @enderror
+                                     </div><br>
+                                     <hr>
+                                    <h4 class="title-box"> Courier Delivery Options </h4>           
+                                    <div class="choose-delivery-methods">
+                                      <label class="delivery-method">
+                                      <input name="delivery-method" id="delivery-method-cod" value="cod" type="radio">
+                                         <span> Own Courier </span><br>
+                                       <input name="delivery-method" id="delivery-method-cod" value="cod" type="radio">
+                                       <span> Angkas </span><br>
+                                       <input name="delivery-method" id="delivery-method-cod" value="cod" type="radio">
+                                       <span> Lalamove </span><br>
+                                       <input name="delivery-method" id="delivery-method-cod" value="cod" type="radio">
+                                       <span> Toktok </span><br>
+                                      </label><br>
+                                    @error('paymentmode') <span class="text-danger">{{$message}} </span> @enderror
                                      </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -90,4 +106,5 @@
                 </div>   
         </div>
     </div>
+    <br><br>
 </x-layout>
