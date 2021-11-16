@@ -184,3 +184,22 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="facks" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+<div class="modal-body">
+        <h1 class="text-center fw-bold antonfont">FAQs</h1>
+        <p class="fs-4">
+          <b>1. Do you deliver?</b> <br>
+          If you are around Pasig area, we deliver with scheduled day per week (Usually Wednesday or Friday) with a minimal fee of 50 pesos.
+          <br>
+          <b>2. Where are you located?</b><br>
+          We are located at Pasig City near Cainta Boundary. You can check our location at Google maps/Waze: 173 Leo, Pasig
+          <br>
+          <b>3. How many days shall i pre-order?</b><br>
+          For our small pastries, we highly suggest that you preorder at least 3 days before your preferred delivery date. For cakes, we recommend to pre-order 5 days before.</p>
+      </div>
