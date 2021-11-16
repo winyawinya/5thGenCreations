@@ -58,7 +58,7 @@
                                     <div style="height: 13em;">
                                     <h5 class="card-title gagalinfont fs-3 mb-3" style="color: #54b8b6; text-shadow: 0 0 3px gray">{{$item->name}}</h5>
                                         <p class="card-text lorafont me-xl-3 me-5" style="font-size: .85em;">{{$item->description}}</p>
-                                    </div>
+                                    </div><br><br>
                                     <div class="d-flex mt-3">
                                         <p class="fw-bold lorafont redtext mt-3" style="font-size: .9em;">Starts at ₱{{$item->price}}</p>
                                         @php
