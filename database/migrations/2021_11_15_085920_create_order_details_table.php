@@ -33,4 +33,5 @@ class CreateOrderDetailsTable extends Migration
     {
         Schema::dropIfExists('order_details');
     }
+
 }

@@ -165,7 +165,6 @@
         III. DELIVERY <br>Buyer can choose their preferred third-party app (Grab, Lalamove, Angkas) in booking for the delivery of the products. Seller will not be liable to any damage, loss or any incidents done once the products were transferred to the delivery service. The seller shall send out a tracking link to the buyer for the delivery.
         <br><br>
         IV. REFUND/RETURN <br>Once the products are released for delivery, buyers cannot refund or return it. The seller will not refund any percentage of the paid amount when there is no necessary reasons. If by any chance, the buyer encounter product issue made by the seller, the buyer shall contact immediately and shall have enough evidence to prove their points. By that time, the seller and buyer shall agree to a compromised solution. </p> 
-          
       </div>
     </div>
   </div>

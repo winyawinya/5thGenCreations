@@ -11,9 +11,9 @@
     <div class="col-12 col-lg-4 justify-content-center h-100">
       <img src="\assets\menu\{{$cartItem->name}}.jpg" class="rounded-3" height="100%" width="100%">
     </div>
-    <div class="col-9 col-lg-4 col-xl-6 mt-3 mt-lg-0">
-      <h5 class="card-title fs-2">{{$cartItem->name}}</h5>
-      <p class="card-text fs-5">
+      <div class="col-9 col-lg-4 col-xl-6 mt-3 mt-lg-0">
+       <h5 class="card-title fs-2">{{$cartItem->name}}</h5>
+        <p class="card-text fs-5">
         Quantity: {{$cartItem->qty}}
         <br>
         Price: {{$cartItem->price}}

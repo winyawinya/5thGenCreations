@@ -34,8 +34,6 @@ Route::get('checkout', [CartController::class, 'checkout'])->name('checkout');
 
 
 
-
-
 //LOGIN AND REGISTER
 
 Route::get ('register', [AccountController::class, 'showRegister'])->middleware('guest');

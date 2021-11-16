@@ -18,7 +18,6 @@
                     <p>A confirmation email was sent.</p>
                     <a href="menu" class="btn btn-submit btn-submitx">Continue Shopping</a>
                 </div>
-
             </div>
         </div>
     </main>

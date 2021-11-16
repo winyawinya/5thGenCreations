@@ -111,8 +111,7 @@
             </div>
         @else
             @continue
-        @endif
-            
+        @endif       
     @endforeach
 
 @else

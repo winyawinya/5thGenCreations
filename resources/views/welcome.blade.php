@@ -29,14 +29,14 @@
 
 <div class="container-fluid p-5 rounded-3" style="background: #d8f3dc; color: #ffc372;">
   <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
-  <div class="container-fluid py-5">
-    <h1 class="fw-bold shadowText antonfont" style="font-size: 8vmax;">
-      'PASTRIES <br> 
-      LOVED BY <br> 
-      EVERY <br> 
-      GENERATION.'
-    </h1>
+    <div class="container-fluid py-5">
+      <h1 class="fw-bold shadowText antonfont" style="font-size: 8vmax;">
+        'PASTRIES <br> 
+         LOVED BY <br> 
+         EVERY <br> 
+         GENERATION.'
+      </h1>
+    </div>
+      <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
   </div>
-  <div class="container-fluid vh-10 longdiv" style="background: #d43535"></div>
-</div>
 </x-layout>

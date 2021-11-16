@@ -47,6 +47,5 @@ class AdminController extends Controller
             $item->save();
         }
         return redirect('/admin-all-products');
-    }
-    
+    }   
 }

@@ -94,7 +94,7 @@
                 var onloadCallback = function() {
                   alert("grecaptcha is ready!");
                 };
-              </script>
+            </script>
         </div>
     </div>
 </x-layout>

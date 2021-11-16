@@ -10,4 +10,5 @@ class ThankyouComponent extends Component
     {
         return view('livewire.thankyou-component')->layout('layouts.base');
     }
+    
 }

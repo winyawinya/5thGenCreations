@@ -80,5 +80,4 @@ class MenuController extends Controller
         return view('checkout',['user'=> Auth::user()
     ]);
     }
-
 }

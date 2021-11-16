@@ -118,5 +118,4 @@ class AccountController extends Controller
         $user->save();
         return redirect('/profile')->with('profileUpdated', 'Your profile has been updated');
     }
-
 }

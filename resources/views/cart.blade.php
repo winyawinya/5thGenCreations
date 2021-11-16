@@ -42,5 +42,5 @@
       @php $page = 'cart'; @endphp
       <x-empty-note :page="$page"/>
     @endif
-  </div>
+    </div>
   </x-layout>

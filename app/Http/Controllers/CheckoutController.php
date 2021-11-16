@@ -13,4 +13,5 @@ class CheckoutController extends Controller
         return view('checkout',['user'=> Auth::user()
     ]);
     }
+    
 }

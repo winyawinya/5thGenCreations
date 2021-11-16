@@ -44,7 +44,7 @@ class CartController extends Controller
             'total' => Cart::subtotal()
         ]);
     }
-
+    
     public function placeorder()
     {
         return view('checkout',['user'=> Auth::user()

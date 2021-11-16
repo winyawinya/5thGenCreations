@@ -104,6 +104,7 @@ class CheckoutComponent extends Component
             return redirect()->route('cart');
         }
     }
+    
     public function render()
     {
         $this->verifyForCheckout();
