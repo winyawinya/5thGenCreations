@@ -6,6 +6,7 @@ use App\Models\Menu;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Session;
 
 class AccountController extends Controller
 {
@@ -78,7 +79,7 @@ class AccountController extends Controller
                 ]);
                 $user = User::create($userInfo);
                 return redirect('/login')->with('registered', 'Your account has been created. Log in now to order!');
-                        
+
     }
     public function showProfile()
     {
