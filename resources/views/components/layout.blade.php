@@ -202,4 +202,4 @@
           <br>
           <b>3. How many days shall i pre-order?</b><br>
           For our small pastries, we highly suggest that you preorder at least 3 days before your preferred delivery date. For cakes, we recommend to pre-order 5 days before.</p>
-      </div>
+</div>
