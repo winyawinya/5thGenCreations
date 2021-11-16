@@ -36,15 +36,15 @@
                                             <label for="address">Address</label>
                                             <input type="text" class="form-control" name="address" id="address" placeholder="Enter Address"  value="{{$user->address}}" readonly>
                                         </div><br><br><br>
-       <hr>
-        <h4 class="title-box"> Payment Method </h4>           
-        <div class="choose-payment-methods">
-            <label class="payment-method">
-                <input name="payment-method" id="payment-method-cod" value="cod" type="radio">
-                    <span> Cash on Delivery </span>
-            </label><br>
-                    @error('paymentmode') <span class="text-danger">{{$message}} </span> @enderror
-                </div>
+                                <hr>
+                                    <h4 class="title-box"> Payment Method </h4>           
+                                    <div class="choose-payment-methods">
+                                      <label class="payment-method">
+                                      <input name="payment-method" id="payment-method-cod" value="cod" type="radio">
+                                         <span> Cash on Delivery </span>
+                                      </label><br>
+                                @error('paymentmode') <span class="text-danger">{{$message}} </span> @enderror
+                                     </div>
                                     </div>
                                 </div>
                             </div>
@@ -60,11 +60,26 @@
                                                 <th>Product</th>
                                                 <th>Quantity</th>
                                                 <th>Price</th>
+                                                <th>Total<th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            
+                                            @foreach ($cart as $cartItem)
+                                            <tr>
+                                                <td>{{$cartItem->name}}</td>
+                                                <td>{{$cartItem->qty}}</td>
+                                                <td>{{$cartItem->price}}</td>
+                                                <td>{{($cartItem->price)*($cartItem->qty)}}</td>
+                                            </tr>
+                                            @endforeach
                                         </tbody>
+                                        <thead>
+                                            <tr>
+                                                 <th>Total<th>
+                                                 <td><td>{{$total}}</td></td>
+                                            </tr>
+                                        </thead>
+                                       
                                     </table>
                                     <hr>
                                     <a href="thankyou" class="btn btn-primary float-end">Place Order</a>

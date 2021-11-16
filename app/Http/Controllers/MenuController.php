@@ -77,7 +77,11 @@ class MenuController extends Controller
 
     public function checkout()
     {
-        return view('checkout',['user'=> Auth::user()
+        return view('checkout',['user'=> Auth::user(),
+        'cart' => Cart::content(),
+        'total' => Cart::subtotal()
     ]);
     }
+
+
 }

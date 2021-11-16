@@ -81,14 +81,13 @@
                         <br/><br/>
                      
                         
-                        
                         <div class="d-flex pb-4 align-items-center justify-content-end">
                            
                            <button type="submit" class="btn btn-primary btn-lg">Register</button>
                         </div>
                     </div>
                 </form>
-            
+
             </div>
             <script type="text/javascript">
                 var onloadCallback = function() {
