@@ -1,6 +1,6 @@
 {{-- 
     Variables to Pass    
-    $page = name of the page duh
+    $page = name of the page
 
 --}}
 @php

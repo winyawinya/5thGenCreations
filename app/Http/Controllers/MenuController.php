@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\User;
+use App\Models\Orders;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
 
@@ -80,13 +81,33 @@ class MenuController extends Controller
         return view('checkout',['user'=> Auth::user(),
         'cart' => Cart::content(),
         'total' => Cart::subtotal()
-    ]);
+
+         ]);
     }
 
     public function thankyou()
     {
-        return view('thankyou',['user'=> Auth::user(),
-        Cart::destroy()
-    ]);
+        $cart = Cart::content();
+        $user = Auth::user();
+        $itemsDB = "";
+        
+        foreach ($cart as $item) {
+            $itemsDB .= $item->name."-".$item->qty."-".$item->options->size."-".$item->options->flavor."|";
+        }
+        $order = Orders::create([
+            'name' => $user->name,
+            'email' => $user->email,
+            'phonenumber' => $user->phone_number,
+            'address' => $user->address,
+            'payment-method' => "COD",
+            'delivery-method' => "wala pa ata tayong nagagawang ganto",
+            'status' => "pending",
+            'message' => "nice",
+            'tracking_number' => "31231231231",
+            'items' => $itemsDB
+        ]);
+            Cart::destroy();
+            return view('thankyou',['user'=> Auth::user(), 'cart' => Cart::content(), "total" => Cart::subtotal()
+        ]);
     }
 }

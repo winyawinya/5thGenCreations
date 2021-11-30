@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -48,4 +49,18 @@ class AdminController extends Controller
         }
         return redirect('/admin-all-products');
     }   
+
+    public function viewregister()
+    {
+        return view('components/viewregister', [
+            'users' => User::all()
+        ]);
+    }
+
+    public function orders()
+    {
+        return view('components/orders', [
+            'users' => User::all()
+        ]);
+    }
 }

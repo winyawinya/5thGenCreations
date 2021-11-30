@@ -21,20 +21,20 @@
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label for="firstname">Name</label>
-                                            <input type="text" name="name" id="name"  class="form-control" placeholder="Enter First Name" value="{{$user->name}}" readonly>
+                                            <label for="name">Name</label>
+                                            <input type="text" name="name" id="name"  class="form-control" placeholder="Enter First Name" value="{{ Auth::user()->name }}" readonly>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="email">Email</label>
-                                            <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" value="{{$user->email}}" readonly>
+                                            <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" value="{{ Auth::user()->email }}" readonly>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="phonenumber">Phone Number</label>
-                                            <input type="text" name="phone_number" id="phone_number" class="form-control" placeholder="Enter Phone Number" value="{{$user->phone_number}}" readonly>
+                                            <input type="text" name="phone_number" id="phone_number" class="form-control" placeholder="Enter Phone Number" value="{{ Auth::user()->phone_number}}" readonly>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="address">Address</label>
-                                            <input type="text" class="form-control" name="address" id="address" placeholder="Enter Address"  value="{{$user->address}}" readonly>
+                                            <input type="text" class="form-control" name="address" id="address" placeholder="Enter Address"  value="{{ Auth::user()->address}}" readonly>
                                         </div><br><br><br>
                                 <hr>
                                     <h4 class="title-box"> Payment Method </h4>           
@@ -51,14 +51,14 @@
                                       <label class="delivery-method">
                                       <input name="delivery-method" id="delivery-method-cod" value="cod" type="radio">
                                          <span> Own Courier </span><br>
-                                       <input name="delivery-method" id="delivery-method-cod" value="cod" type="radio">
+                                       <input name="delivery-method" id="delivery-method-angkas" value="angkas" type="radio">
                                        <span> Angkas </span><br>
-                                       <input name="delivery-method" id="delivery-method-cod" value="cod" type="radio">
+                                       <input name="delivery-method" id="delivery-method-lalamove" value="lalamove" type="radio">
                                        <span> Lalamove </span><br>
-                                       <input name="delivery-method" id="delivery-method-cod" value="cod" type="radio">
+                                       <input name="delivery-method" id="delivery-method-toktok" value="toktok" type="radio">
                                        <span> Toktok </span><br>
                                       </label><br>
-                                    @error('paymentmode') <span class="text-danger">{{$message}} </span> @enderror
+                                    @error('deliverymode') <span class="text-danger">{{$message}} </span> @enderror
                                      </div>
 
                                     </div>

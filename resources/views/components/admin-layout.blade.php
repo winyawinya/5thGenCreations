@@ -70,12 +70,12 @@
                                     <a class="nav-link" href="/admin-out-products">Out of Stock Products</a>
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed {{$ord}}" href="#">
+                            <a class="nav-link collapsed {{$ord}}" href="/orders">
                                 <div class="sb-nav-link-icon"><i class="fas fa-receipt"></i></div>
                                 Orders
                                 <div class="sb-sidenav-collapse-arrow"></div>
                             </a>
-                            <a class="nav-link" href="view-register.php">
+                            <a class="nav-link" href="/viewregister">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 Registered Users
                             </a>

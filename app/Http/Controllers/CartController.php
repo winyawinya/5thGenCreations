@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Orders;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use function GuzzleHttp\Promise\all;
 
@@ -43,11 +44,5 @@ class CartController extends Controller
             'cart' => Cart::content(),
             'total' => Cart::subtotal()
         ]);
-    }
-    
-    public function placeorder()
-    {
-        return view('checkout',['user'=> Auth::user()
-    ]);
     }
 }
