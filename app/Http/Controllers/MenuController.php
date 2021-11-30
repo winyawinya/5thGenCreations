@@ -100,7 +100,7 @@ class MenuController extends Controller
             'phonenumber' => $user->phone_number,
             'address' => $user->address,
             'payment-method' => "COD",
-            'delivery-method' => "wala pa ata tayong nagagawang ganto",
+            'delivery-method' => "Own Courier",
             'status' => "pending",
             'message' => "nice",
             'tracking_number' => "31231231231",
