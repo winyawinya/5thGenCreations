@@ -53,8 +53,10 @@ Route::get('admin-out-products',[AdminController::class, 'adminOutProducts'])->m
 Route::get('admin-edit-products',[AdminController::class, 'adminEditProducts'])->middleware('admin');
 Route::post('post-edit-products',[AdminController::class, 'submitEditProducts'])->middleware('admin')->name('afterEdit');
 Route::get('viewregister',[AdminController::class, 'viewregister'])->middleware('admin');
-Route::get('orders',[AdminController::class, 'orders'])->middleware('admin');
-
+Route::get('pending-orders',[AdminController::class, 'pendingOrders'])->middleware('admin');
+Route::get('completed-orders',[AdminController::class, 'completedOrders'])->middleware('admin');
+Route::post('completed-orders',[AdminController::class, 'orderCompleter'])->middleware('admin');
+Route::get('order-details-{id}',[AdminController::class, 'orderDetails'])->middleware('admin')->name('orderDetails');
 
 //FAVORITES
 Route::post('favorites', [MenuController::class,'changeFave'])->middleware('auth');

@@ -59,22 +59,28 @@
                                 Main Site
                             </a>
                             <div class="sb-sidenav-menu-heading">Others</div>
-                            <a class="nav-link collapsed {{$prod}}" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed {{$prod}}" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProducts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-utensils"></i></div>
                                 Products
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse" id="collapseProducts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/admin-all-products">All Products</a>
                                     <a class="nav-link" href="/admin-out-products">Out of Stock Products</a>
                                 </nav>
                             </div>
-                            <a class="nav-link collapsed {{$ord}}" href="/orders">
+                            <a class="nav-link collapsed {{$ord}}" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOrders" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-receipt"></i></div>
                                 Orders
-                                <div class="sb-sidenav-collapse-arrow"></div>
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <div class="collapse" id="collapseOrders" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/pending-orders">Pending</a>
+                                    <a class="nav-link" href="/completed-orders">Completed</a>
+                                </nav>
+                            </div>
                             <a class="nav-link" href="/viewregister">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 Registered Users

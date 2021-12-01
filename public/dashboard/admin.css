@@ -49,6 +49,11 @@
   }
 }
 
+/* ----------DELIVERY STATUS---------- */
+.otwIcon:hover{color: dodgerblue;}
+.prepIcon:hover{color: dodgerblue;}
+.checkIcon:hover{color: dodgerblue;}
+
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);

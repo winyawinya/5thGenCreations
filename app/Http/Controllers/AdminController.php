@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Orders;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class AdminController extends Controller
 {
@@ -57,10 +59,39 @@ class AdminController extends Controller
         ]);
     }
 
-    public function orders()
+    public function pendingOrders()
     {
-        return view('components/orders', [
-            'users' => User::all()
+
+        return view('dashboard/pending-orders', [
+            'users' => User::all(),
+            'orders' => Orders::all(),
+        ]);
+    }
+
+    public function completedOrders()
+    {
+        return view('dashboard/completed-orders', [
+            'users' => User::all(),
+            'orders' => Orders::all()
+        ]);
+    }
+
+    public function orderCompleter()
+    {
+        $order = Orders::find(request()->input('id'));
+        $order->status = 'completed';
+        $order->save();
+        return view('dashboard/completed-orders', [
+            'users' => User::all(),
+            'orders' => Orders::all()
+        ]);
+    }
+
+    public function orderDetails(Request $request, $id)
+    {
+        
+        return view('dashboard/order-details',[
+            'order' => Orders::find($id), 
         ]);
     }
 }
