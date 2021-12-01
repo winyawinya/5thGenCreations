@@ -18,8 +18,8 @@
                 <h4><b>Payment Method:</b> {{$order->getAttribute('payment-method')}}</h4>
                 <h4><b>Delivery Method:</b> {{$order->getAttribute('delivery-method')}}</h4>
                 <h4><b>Message:</b><br> {{$order->message}}</h4>
-            </div>
         </div>
+    </div>
         <div class="d-flex">
             <h4 class="ps-5"><b>Items:</b></h4>
             <div class="p-5">
