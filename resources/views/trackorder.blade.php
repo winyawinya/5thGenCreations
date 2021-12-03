@@ -52,15 +52,15 @@
                                         @endforeach </td>
 
                                             <td>@foreach ($items as $item)
-                    @if (!$item=="")
-                        @php
-                            $item = explode('-', $item);
-                            $price = explode(':', $item[2]);
-                            $total += $price[0]*$item[1];
-                        @endphp
-                        <h5>₱{{$price[0]*$item[1]}}</h5>
-                    @endif
-                @endforeach</td>
+                                            @if (!$item=="")
+                                                @php
+                                                    $item = explode('-', $item);
+                                                    $price = explode(':', $item[2]);
+                                                    $total += $price[0]*$item[1];
+                                                @endphp
+                                            <h5>₱{{$price[0]*$item[1]}}</h5>
+                                                @endif
+                                        @endforeach</td>
                                             <td>
                                                 <form action="/confirm" method="POST">
                                                     <a href="orderconfirmed" button type="button" name="order_confirm" value="{{$order->tracking_number}}"class="btn btn-success">Confirm</button></a>
