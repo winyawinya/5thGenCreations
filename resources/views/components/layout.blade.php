@@ -60,6 +60,7 @@
                   <ul class="dropdown-menu" aria-labelledby="userProfile">
                     <li><a class="dropdown-item" href="/profile"><i class="fas fa-address-card navicon me-1"></i>My Profile</a></li>
                     <li><a class="dropdown-item" href="/favorites"><i class="fas fa-heart navicon me-1"></i>Favorites</a></li>
+                    <li><a class="dropdown-item" href="/trackorder"><i class="fas fa-truck otwIcon"></i></i>Order</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="/logout">Logout</a></li>
                   </ul>

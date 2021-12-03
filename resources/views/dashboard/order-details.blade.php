@@ -17,7 +17,6 @@
             <div class="p-5">
                 <h4><b>Payment Method:</b> {{$order->getAttribute('payment-method')}}</h4>
                 <h4><b>Delivery Method:</b> {{$order->getAttribute('delivery-method')}}</h4>
-                <h4><b>Message:</b><br> {{$order->message}}</h4>
         </div>
     </div>
         <div class="d-flex">

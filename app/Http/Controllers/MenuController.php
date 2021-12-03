@@ -109,4 +109,23 @@ class MenuController extends Controller
             return view('thankyou',['user'=> Auth::user(), 'cart' => Cart::content(), "total" => Cart::subtotal()
         ]);
     }
+
+    public function trackorder()
+    {
+        $cart = Cart::content();
+        $user = Auth::user();
+        $itemsDB = "";
+
+        return view('trackorder',[
+            'orders' => Orders::where('name', $user->name)->get(),
+            'total' => Cart::subtotal(),
+            'items' => $itemsDB 
+        ]);
+            
+    }
+
+    public function orderconfirmed()
+    {
+        return view('orderconfirmed');
+    }
 }

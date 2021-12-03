@@ -67,3 +67,9 @@ Route::get('checkout',[MenuController::class, 'checkout'])->middleware('auth');
 
 //THANKYOU
 Route::get('thankyou',[MenuController::class, 'thankyou'])->middleware('auth');
+
+//TRACKORDER
+Route::get('trackorder', [MenuController::class,'trackorder'])->middleware('auth');
+
+//ORDERCONFIRMATION
+Route::get('orderconfirmed',[MenuController::class, 'orderconfirmed'])->middleware('auth');

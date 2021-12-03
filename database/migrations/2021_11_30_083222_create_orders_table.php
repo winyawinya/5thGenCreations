@@ -22,7 +22,6 @@ class CreateOrdersTable extends Migration
             $table->string('payment-method');
             $table->string('delivery-method');
             $table->string('status');
-            $table->string('message')->nullable();
             $table->string('tracking_number');
             $table->string ('items');
             $table->timestamps();
