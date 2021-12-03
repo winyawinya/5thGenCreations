@@ -28,6 +28,7 @@ class AccountController extends Controller
            'email' => 'required|email|max:255',
            'password' => 'required'
         ]);
+        
 
         if (Auth::attempt($userInfo)) {
             return redirect('/')->with('loginSuccess', 'You are now logged in');
@@ -54,35 +55,31 @@ class AccountController extends Controller
             'address' => 'required|max:255',
             'phone_number' => 'required|digits:11',
             'birthday' => 'required|date',
-           
-            
-            
         ]); 
         
-                $userInfo['name'] = ucfirst($userInfo['name']);
-                $userInfo['password'] = bcrypt($userInfo['password']);
-                $userInfo['isAdmin'] = FALSE;
-                $userInfo['favorites'] = '';
-                $captcha = request()->validate([
-                    'g-recaptcha-response' => function ($attribute, $value, $fail){
-                        $secretKey = config('services.recaptcha.secret');
-                        $response = $value;
-                        $userIP = $_SERVER['REMOTE_ADDR']; 
-                        $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=&userIP";
-                        $response = \file_get_contents($url);
-                        $response = json_decode($response);
-                        if(!$response->success){
-                            Session::flash('g-recaptcha-response', 'Please check reCaptcha box!');
-                            Session::flash('alert-class' , 'alert-danger');
-                            $fail($attribute.'google reCaptcha failed!');
-                        }
-                    },
-                ]);
-                $user = User::create($userInfo);
+            $userInfo['name'] = ucfirst($userInfo['name']);
+            $userInfo['password'] = bcrypt($userInfo['password']);
+            $userInfo['isAdmin'] = FALSE;
+            $userInfo['favorites'] = '';
+            // $captcha = request()->validate([
+            //     'g-recaptcha-response' => function ($attribute, $value, $fail){
+            //         $secretKey = config('services.recaptcha.secret');
+            //         $response = $value;
+            //         $userIP = $_SERVER['REMOTE_ADDR']; 
+            //         $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=&userIP";
+            //         $response = \file_get_contents($url);
+            //         $response = json_decode($response);
+            //         if(!$response->success){
+            //             Session::flash('g-recaptcha-response', 'Please check reCaptcha box!');
+            //             Session::flash('alert-class' , 'alert-danger');
+            //             $fail($attribute.'google reCaptcha failed!');
+            //         }
+            //     },
+            // ]);
+            $user = User::create($userInfo);
 
-               event(new Registered($user));
-                return view('verify-email');
-                
+            event(new Registered($user));
+            return redirect('/login')->with('registered', 'Your account has been registered, please verify your email.');    
     }
 
     

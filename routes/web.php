@@ -4,8 +4,10 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\VerificationController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +29,12 @@ Route::get('font', [MenuController::class, 'fonts']);
 
 //CART
 
-Route::get('cart', [CartController::class,'showCart']);
-Route::post('cart-remove', [CartController::class,'remove'])->name('remove');
-Route::post('cart-add', [CartController::class,'addToCart'])->name('cartAdd');
-Route::get('checkout', [CartController::class, 'checkout'])->name('checkout');
+Route::group(['middleware' => ['auth' , 'verified']], function() {
+    Route::get('cart', [CartController::class,'showCart']);
+    Route::post('cart-remove', [CartController::class,'remove'])->name('remove');
+    Route::post('cart-add', [CartController::class,'addToCart'])->name('cartAdd');
+    Route::get('checkout', [CartController::class, 'checkout'])->name('checkout');
+});
 
 
 
@@ -75,16 +79,8 @@ Route::get('trackorder', [MenuController::class,'trackorder'])->middleware('auth
 Route::get('orderconfirmed',[MenuController::class, 'orderconfirmed'])->middleware('auth');
 
 //EMAIL
-Route::get('/email/verify', function () {
-    return view('verify-email');
-  })->middleware('auth')->name('verification.notice');
-  
-  Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-      $request->fulfill();
-     return redirect()->route('HomePage');
-  })->middleware(['auth', 'signed'])->name('verification.verify');
-  
-  Route::post('/email/verification-notification', function (Request $request) {
-      $request->user()->sendEmailVerificationNotification();
-     return back()->with('message', 'Verification link sent!');
-  })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/email/verify', [VerificationController::class, 'show'])->name('verification.notice');
+    Route::get('/email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify')->middleware(['signed']);
+    Route::post('/email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
+});

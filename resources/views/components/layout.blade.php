@@ -25,7 +25,7 @@
     <!-- navigation bar -->
     <nav class="navbar hammersmithfont navbar-light bg-white sticky-top navbar-expand-lg pb-3 pb-lg-0">
       <div class="container">
-        <a href="/" class="navbar-brand me-5"><img src="assets\5thgen Logo.png" width="100rem" height="100rem" alt=""></a>
+        <a href="/" class="navbar-brand me-5"><img src="/assets/5thgen Creations Logo.png" width="100rem" height="100rem" alt=""></a>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
             <span class="navbar-toggler-icon"></span>
         </button>
