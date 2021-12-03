@@ -78,6 +78,7 @@ class MenuController extends Controller
 
     public function checkout()
     {
+        
         return view('checkout',['user'=> Auth::user(),
         'cart' => Cart::content(),
         'total' => Cart::subtotal()
@@ -92,7 +93,7 @@ class MenuController extends Controller
         $itemsDB = "";
         
         foreach ($cart as $item) {
-            $itemsDB .= $item->name."-".$item->qty."-".$item->options->size."-".$item->options->flavor."|";
+            $itemsDB .= $item->name."-".$item->qty."-".$item->options->size."-".$item->options->flavor."-".$item->id."|";
         }
         $order = Orders::create([
             'name' => $user->name,

@@ -21,8 +21,8 @@ class CartController extends Controller
 
     public function addToCart(Request $request)
     {   
-        $numbers = range(1, 200000);
-        $id = shuffle($numbers);
+        
+        $id = $request->id;
         $name = $request->itemName;
         $quantity = intval($request->itemQuantity);
         $price = ltrim($request->itemPrice, '₱');

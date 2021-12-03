@@ -58,6 +58,7 @@ Route::get('admin-edit-products',[AdminController::class, 'adminEditProducts'])-
 Route::post('post-edit-products',[AdminController::class, 'submitEditProducts'])->middleware('admin')->name('afterEdit');
 Route::get('viewregister',[AdminController::class, 'viewregister'])->middleware('admin');
 Route::get('pending-orders',[AdminController::class, 'pendingOrders'])->middleware('admin');
+Route::post('pending-orders',[AdminController::class, 'deleteOrder'])->middleware('admin');
 Route::get('completed-orders',[AdminController::class, 'completedOrders'])->middleware('admin');
 Route::post('completed-orders',[AdminController::class, 'orderCompleter'])->middleware('admin');
 Route::get('order-details-{id}',[AdminController::class, 'orderDetails'])->middleware('admin')->name('orderDetails');

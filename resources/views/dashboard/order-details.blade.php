@@ -27,8 +27,15 @@
                         @php
                             $item = explode('-', $item);
                             $size = explode(':', $item[2]);
+                            $flavor = [];
+                            if ($item[3] != '') {
+                                $flavor = explode(':', $item[3]);
+                                $flavor[1] = "-".$flavor[1];
+                            }else{
+                                $flavor[1] = "";
+                            }
                         @endphp
-                        <h5>x{{$item[1]." ".$item[0]."-".$size[1]}}</h5>
+                        <h5>x{{$item[1]." ".$item[0]."-".$size[1].$flavor[1]}}</h5>
                     @endif
                 @endforeach
             </div>
@@ -51,6 +58,7 @@
         </div>
         @if ($order->status != 'completed')
             <div class="w-50 p-5">
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete Order</button>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#statusModal">Change Delivery Status</button>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#completeModal">Mark as Completed</button>
             </div>
@@ -98,6 +106,28 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
           <form action="/completed-orders" method="POST">
+            @csrf
+            <input type="hidden" name="id" value="{{$order->id}}"/>
+            <button type="submit" class="btn btn-primary">Confirm</button>
+          </form> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <h5>Are you sure?</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+          <form action="/pending-orders" method="POST">
             @csrf
             <input type="hidden" name="id" value="{{$order->id}}"/>
             <button type="submit" class="btn btn-primary">Confirm</button>

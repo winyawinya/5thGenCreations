@@ -45,7 +45,7 @@
         <!-- MODAL CONTENT OTIDS -->
         
           <img src="assets\menu\{{$item->name}}.jpg" alt="" height="100%" width="100%"/>
-
+          <input type="hidden" name="id" value="{{$item->id}}"/>
           <input name="itemName" type="hidden" value="{{$currentModalItemName}}">{{-- FORM PASS --}}
           <h2 class="price">{{"₱". $item->price}}</h2>
           <h6>Allergens: {{$item->allegens}}</h6>

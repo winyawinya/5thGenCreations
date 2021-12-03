@@ -68,6 +68,17 @@ class AdminController extends Controller
         ]);
     }
 
+    public function deleteOrder()
+    {
+        $order = Orders::find(request()->input('id')); 
+        $order->delete();
+        
+        return view('dashboard/pending-orders', [
+            'users' => User::all(),
+            'orders' => Orders::all(),
+        ]);
+    }
+
     public function completedOrders()
     {
         return view('dashboard/completed-orders', [
@@ -78,9 +89,30 @@ class AdminController extends Controller
 
     public function orderCompleter()
     {
-        $order = Orders::find(request()->input('id'));
+        
+        //order complete
+        $order = Orders::find(request()->input('id'));    
         $order->status = 'completed';
         $order->save();
+
+        //minus stocks
+        $items = explode('|', $order->items);
+        $stockID = [];
+        $stockQTY = [];
+        foreach ($items as $item) {
+            if (!$item=="") {
+                $WOWGALENG = explode('-', $item);
+                array_push($stockID, $WOWGALENG[4]);
+                array_push($stockQTY, $WOWGALENG[1]);
+            }
+        }
+        foreach ($stockID as $key=>$id) {
+            $item = Menu::find($id);
+            $item->stocks = ($item->stocks)-($stockQTY[$key]);
+            $item->save();
+        }
+        
+
         return view('dashboard/completed-orders', [
             'users' => User::all(),
             'orders' => Orders::all()
