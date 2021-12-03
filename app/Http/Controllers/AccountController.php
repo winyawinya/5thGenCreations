@@ -6,11 +6,12 @@ use App\Models\Menu;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Session;
+use Illuminate\Auth\Events\Registered;
 
+use Session;
 class AccountController extends Controller
 {
-
+  
     public function showRegister()
     {
         return view('register');
@@ -78,9 +79,14 @@ class AccountController extends Controller
                     },
                 ]);
                 $user = User::create($userInfo);
-                return redirect('/login')->with('registered', 'Your account has been created. Log in now to order!');
 
+               event(new Registered($user));
+                return view('verify-email');
+                
     }
+
+    
+
     public function showProfile()
     {
 
