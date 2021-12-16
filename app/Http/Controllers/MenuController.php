@@ -103,7 +103,7 @@ class MenuController extends Controller
             'payment-method' => "COD",
             'delivery-method' => "Own Courier",
             'status' => "pending",
-            'tracking_number' => "5thgen" .rand(1111,9999),
+            'tracking_number' => rand(1111111111,9999999999),
             'items' => $itemsDB
         ]);
             Cart::destroy();

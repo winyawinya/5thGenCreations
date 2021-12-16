@@ -62,6 +62,7 @@ Route::post('pending-orders',[AdminController::class, 'deleteOrder'])->middlewar
 Route::get('completed-orders',[AdminController::class, 'completedOrders'])->middleware('admin');
 Route::post('completed-orders',[AdminController::class, 'orderCompleter'])->middleware('admin');
 Route::get('order-details-{id}',[AdminController::class, 'orderDetails'])->middleware('admin')->name('orderDetails');
+Route::get('adminaddproduct',[AdminController::class, 'adminaddproduct'])->middleware('admin');
 
 //FAVORITES
 Route::post('favorites', [MenuController::class,'changeFave'])->middleware('auth');

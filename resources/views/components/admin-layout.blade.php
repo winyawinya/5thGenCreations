@@ -85,6 +85,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 Registered Users
                             </a>
+                            <a class="nav-link" href="/adminaddproduct">
+                                <div class="sb-nav-link-icon"><i class="fas fa-utensils"></i></div>
+                                Add Product
+                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

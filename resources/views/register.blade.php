@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-8 col-xl-8 col-12 my-5 px-5 rounded-3 shadow-lg" style="
-            background: #d8f3dc; 
-            color: #425545;
+            background: #9fcef8; 
+            color: #000000;
             font-weight: bold;
             ">
                 <form action="/register" method="POST">

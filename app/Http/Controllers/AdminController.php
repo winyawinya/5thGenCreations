@@ -126,4 +126,10 @@ class AdminController extends Controller
             'order' => Orders::find($id), 
         ]);
     }
+
+    public function adminaddproduct()
+    {
+        return view('components/adminaddproduct');
+            
+    }
 }

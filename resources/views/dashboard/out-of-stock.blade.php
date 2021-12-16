@@ -4,17 +4,26 @@
 @endphp
 <x-admin-layout :dash="$nope" :prod="$active" :ord="$nope">
     <main>
-        <div class="container-fluid px-4">
-            <div class="d-flex justify-content-between">
-                <h1 class="mt-4">Out-of-Stock Products</h1>
-                <a href="/admin-edit-products" class="btn btn-primary btn-sm mt-4 mb-3 me-5 fs-4">Edit Stocks</a>
+    <div class="container-fluid-px-4">
+                <h3 class="mt-4">5thGen Creations</h3>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Dashboard</li> 
+                        <li class="breadcrumb-item active">Out of Stocks</li> 
+                    </ol>
+            <div class="row">
+             <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Out of Stocks</h4>
+                <a href="/admin-edit-products" class="btn btn-primary">Edit Stocks</a>
             </div>
             <div class="d-flex justify-content-center text-center">
                 @if ($products->isEmpty())
                     <div class="alert alert-success p-5 mt-5"><h1>You have no Out-of-Stock products!</h1></div>
                 @else
-                    <table class="table table-hover table-success table-bordered border border-3 border-dark" style="width: 70%">
-                        <thead>
+                <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Stocks</th>

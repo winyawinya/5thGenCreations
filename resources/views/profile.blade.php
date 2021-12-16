@@ -1,26 +1,55 @@
 <x-layout>
-    <div class="container my-3 p-5 rounded-3 shadow-lg" style="
-    background: #d8f3dc; 
-    color: #425545;
-    ">
+    <div class="container my-3 p-5 rounded-3 shadow-lg">
     @if($edit == FALSE)
         @if (session()->has('profileUpdated'))
             <div class="alert mt-4 alert-primary">{{session('profileUpdated')}}</div>
         @endif
-        <h1 class="fw-bold">Profile</h1>
-        <div class="container ms-4">
-            <h2 class="fw-bold">Name: </h2>
-            <h2 class="ms-3">{{$user->name}}</h2>
-            <h2 class="fw-bold">Email: </h2>
-            <h2 class="ms-3">{{$user->email}}</h2>
-            <h2 class="fw-bold">Address: </h2>
-            <h2 class="ms-3">{{$user->address}}</h2>
-            <h2 class="fw-bold">Phone Number: </h2>
-            <h2 class="ms-3">{{$user->phone_number}}</h2>
-            <h2 class="fw-bold">Birthday: </h2>
-            <h2 class="ms-3">{{$user->birthday}}</h2>
-            <a href="/edit-profile" class="btn btn-lg btn-secondary my-3">Edit Profile</a>
+
+    <section class="py-3W">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <h1 class="fw-bold"> My Profile</h1>
+        <hr> 
+        <form action="">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" value="{{$user->name}}">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control" value="{{$user->email}}">
+                    </div>
+                </div>
+                <div class="col-md-13">
+                    <div class="form-group">
+                        <label for="">Address</label>
+                        <input type="text" class="form-control" value="{{$user->address}}">
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Phone Number</label>
+                        <input type="text" class="form-control" value="{{$user->phone_number}}">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Birthday</label>
+                        <input type="text" class="form-control" value="{{$user->birthday}}">
+                    </div>
+                </div>
+                <a href="/edit-profile" class="btn btn-lg btn-secondary my-3">Edit Profile</a>
+            </div>
+        </form>
+                </div>
+            </div>
         </div>
+    </section>
+
     @else
         <h1 class="fw-bold">Edit Profile</h1>
         <div class="container ms-4 pe-4">

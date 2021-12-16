@@ -6,13 +6,23 @@
     <main>
         <div class="container-fluid px-4">
             @if (!$edit)
-                <div class="d-flex justify-content-between">
-                    <h1 class="mt-4">All Products</h1>
-                    <a href="/admin-edit-products" class="btn btn-primary btn-sm mt-4 mb-3 me-5 fs-4">Edit Stocks</a>
-                </div>
-                <div class="d-flex justify-content-center text-center">
-                    <table class="table table-hover table-success table-bordered border border-3 border-dark" style="width: 70%">
-                        <thead>
+            <div class="container-fluid-px-4">
+                <h3 class="mt-4">5thGen Creations</h3>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Dashboard</li> 
+                        <li class="breadcrumb-item active">All Products</li> 
+                    </ol>
+            <div class="row">
+             <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>All Products </h4>
+                        <a href="/admin-edit-products" class="btn btn-primary">Edit Stocks</a>
+                    </div>
+
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Stocks</th>
@@ -21,8 +31,9 @@
                             <th scope="col">Size</th>
                             <th scope="col">Flavor</th>
                         </tr>
-                        </thead>
-                        <tbody>
+                    </thead>
+                    <tbody>
+                      
                         @foreach ($products as $index=>$product)
                             @if ($product->stocks==0)
                                 <tr class="table-danger table-bordered border border-1 border-dark">
@@ -47,16 +58,24 @@
                         </tbody>
                     </table>
                 </div> 
-            @else
+                @else
                 <form action="{{route('afterEdit')}}" method="POST">
                     @csrf
-                    <div class="d-flex justify-content-between">
-                        <h1 class="mt-4">All Products</h1>
-                        <button type="submit" class="btn btn-primary btn-sm mt-4 mb-3 me-5 fs-4">Done</button>
+                    <h3 class="mt-4">5thGen Creations</h3>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Dashboard</li> 
+                        <li class="breadcrumb-item active">All Products</li> 
+                    </ol>
+            <div class="row">
+             <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>All Products </h4>
+                        <button type="submit" class="btn btn-primary">Done</button>
                     </div>
-                    <div class="d-flex justify-content-center text-center">
-                        <table class="table table-hover table-success table-bordered border border-3 border-dark" style="width: 70%">
-                            <thead>
+                    <div class="card-body">
+                     <table class="table table-bordered">
+                        <thead>
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Stocks</th>
@@ -65,8 +84,8 @@
                                 <th scope="col">Size</th>
                                 <th scope="col">Flavor</th>
                             </tr>
-                            </thead>
-                            <tbody>
+                        </thead>
+                        <tbody>
                             @foreach ($products as $index=>$product)
                                 @if ($product->stocks==0)
                                     <tr class="table-danger table-bordered border border-1 border-dark">
@@ -88,11 +107,10 @@
                                     </tr>
                                 @endif
                             @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </form>
+                </table>
+            </div>
             @endif
+            
         </div>
     </main>
 </x-admin-layout>

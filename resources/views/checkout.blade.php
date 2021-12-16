@@ -1,15 +1,5 @@
 <x-layout>
     <div class="container"> 
-
-            <div>
-                <ul>
-                  
-                </ul>
-            </div>
-
-                
-            </div>
-
         <div class="summary summary-checkout">
             <div class="summary-item details">   
                 <div class="container mt-5">
