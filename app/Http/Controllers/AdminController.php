@@ -6,6 +6,10 @@ use App\Models\Menu;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Orders;
+use Session;
+use Validator;
+use Auth;
+use Cart;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class AdminController extends Controller
@@ -132,4 +136,5 @@ class AdminController extends Controller
         return view('components/adminaddproduct');
             
     }
+    
 }

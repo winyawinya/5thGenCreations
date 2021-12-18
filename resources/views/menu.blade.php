@@ -4,6 +4,6 @@
   </div>
   <div class="container-fluid productpage py-2 px-5">
         <x-menu-card :menu="$menu" :limit=0 :withCategory=TRUE :faves=$faves :alternate=FALSE />
-    </div>{{-- extra end div --}}
+    </div>
   </div>
 </x-layout>

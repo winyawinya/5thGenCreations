@@ -40,7 +40,7 @@ class MenuController extends Controller
         return view('menu', [
             'faves' => $faveID,
             'menu' => Menu::filter(request(['search']))->orderBy('category', 'DESC')->orderBy('name', 'DESC')->get()
-        ]);
+        ]); 
     }
 
     public function fonts()
@@ -90,22 +90,7 @@ class MenuController extends Controller
     {
         $cart = Cart::content();
         $user = Auth::user();
-        $itemsDB = "";
-        
-        foreach ($cart as $item) {
-            $itemsDB .= $item->name."-".$item->qty."-".$item->options->size."-".$item->options->flavor."-".$item->id."|";
-        }
-        $order = Orders::create([
-            'name' => $user->name,
-            'email' => $user->email,
-            'phonenumber' => $user->phone_number,
-            'address' => $user->address,
-            'payment-method' => "COD",
-            'delivery-method' => "Own Courier",
-            'status' => "pending",
-            'tracking_number' => rand(1111111111,9999999999),
-            'items' => $itemsDB
-        ]);
+       
             Cart::destroy();
             return view('thankyou',['user'=> Auth::user(), 'cart' => Cart::content(), "total" => Cart::subtotal()
         ]);

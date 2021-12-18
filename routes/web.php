@@ -23,7 +23,7 @@ use Illuminate\Http\Request;
 //HOMEPAGE AND MENUPAGE
 
 Route::get('/', [MenuController::class,'HomePage'])->where('menu', "[A-z_\-]+");
-Route::get('products', [MenuController::class,'MenuPage'])->where('menu', "[A-z_\-]+");
+Route::get('products', [MenuController::class,'MenuPage'])->where('menu', "[A-z_\-]+")->name('products-data');
 Route::get('font', [MenuController::class, 'fonts']);
 
 
@@ -34,6 +34,10 @@ Route::group(['middleware' => ['auth' , 'verified']], function() {
     Route::post('cart-remove', [CartController::class,'remove'])->name('remove');
     Route::post('cart-add', [CartController::class,'addToCart'])->name('cartAdd');
     Route::get('checkout', [CartController::class, 'checkout'])->name('checkout');
+});
+
+Route::prefix('home-function')->group(function(){
+    Route::post('{id}', [CartController::class, 'showFunctions'])->name('home-functions');
 });
 
 
@@ -72,7 +76,7 @@ Route::get('favorites', [MenuController::class,'favorites'])->middleware('auth')
 Route::get('checkout',[MenuController::class, 'checkout'])->middleware('auth');
 
 //THANKYOU
-Route::get('thankyou',[MenuController::class, 'thankyou'])->middleware('auth');
+Route::get('thankyou',[MenuController::class, 'thankyou'])->middleware('auth')->name('thankyou');
 
 //TRACKORDER
 Route::get('trackorder', [MenuController::class,'trackorder'])->middleware('auth');
@@ -82,6 +86,7 @@ Route::get('orderconfirmed',[MenuController::class, 'orderconfirmed'])->middlewa
 
 //EMAIL
 Route::group(['middleware' => ['auth']], function() {
+    Route::get('/print-order', [CartController::class,'print_orders'])->name('print-order');
     Route::get('/email/verify', [VerificationController::class, 'show'])->name('verification.notice');
     Route::get('/email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify')->middleware(['signed']);
     Route::post('/email/resend', [VerificationController::class, 'resend'])->name('verification.resend');

@@ -17,59 +17,62 @@
                 <div class="card-header">
                     <h4>Add New Product</h4>
                 </div>
+                <form action="{{route('home-functions',['id' => 'add-product'])}}" method="POST" enctype="multipart/form-data" autocomplete="off">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="">Name</label>
-                            <input type="text" class="form-control" name="name">
+                            <input type="text" class="form-control" required name="name">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="">Category</label>
-                            <select class="form-select" aria-label="Defaulf select example">
+                            <select class="form-select" name="category" required aria-label="Defaulf select example">
                                 <option value="">SELECT A CATEGORY</option>
-                                <option value="1">BANANA BREAD</option>
-                                <option value="2">BROWNIES</option>
-                                <option value="3">CAKES</option>
-                                <option value="4">CHEESECAKES</option>
-                                <option value="5">COOKIES</option>
-                                <option value="6">TRUFFLES</option>
+                                <option value="BANANA BREAD">BANANA BREAD</option>
+                    <option value="BROWNIES">BROWNIES</option>
+                    <option value="CAKES">CAKES</option>
+                    <option value="CHEESECAKES">CHEESECAKES</option>
+                    <option value="COOKIES">COOKIES</option>
+                    <option value="TRUFFLES">TRUFFLES</option>
 
                             </select>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="">Variant</label>
-                            <input type="text" class="form-control" name="variant">
+                            <input type="text" class="form-control" required name="variant">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="">Size</label>
-                            <input type="text" class="form-control" name="size">
+                            <input type="text" class="form-control" required name="size">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="">Flavors</label>
-                            <input type="text" class="form-control" name="flavors">
+                            <input type="text" class="form-control" required name="flavors">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="">Price</label>
-                            <input type="text" class="form-control" name="price">
+                            <input type="text" class="form-control" required name="price">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="">Allergens</label>
-                            <input type="text" class="form-control" name="allergens">
+                            <input type="text" class="form-control" required name="allergens">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="">Stocks</label>
-                            <input type="number" class="form-control" name="stocks">
+                            <input type="number" class="form-control" required name="stocks">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="">Description</label>
-                            <textarea name="description" rows="3" class="form-control"></textarea>
+                            <textarea name="description" required rows="3" class="form-control"></textarea>
                         </div>
                         <div class="col-md-11">
-                            <input type="file" name="image" class="form-control">
+                            <input type="file" name="image" required class="form-control">
                         </div><br><br><br>
                         <div class="col-md-5">
                             <button type="sumbit" class="btn btn-primary">Submit</button>
                         </div>
                     </div> 
+</form>
                 </div>
             </div>
         </div>

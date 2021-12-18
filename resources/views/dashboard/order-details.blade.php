@@ -79,8 +79,13 @@
                 </div>
                 <div class="row">
                   <div>
-                    <h4 class="ps-5"><b>Total:</b> ₱{{$total}}<br></h4>
-                    <h4 class="ps-5"><b>Status:</b> {{ucfirst($order->status)}}<br></h4>
+                  <h4 class="ps-5"><b>Shipping Fee:</b> ₱{{number_format($order->shipping_fee,2)}}<br></h4>
+                    <h4 class="ps-5"><b>Total:</b> ₱{{$total+$order->shipping_fee}}<br></h4>
+                    <h4 class="ps-5"><b>Status:</b> 
+                          
+                    {{ucfirst($order->status)}}
+                    
+                    <br></h4>
                     <h4 class="ps-5"><b>Payment Method:</b> {{$order->getAttribute('payment-method')}}</h4>
                     <h4 class="ps-5"><b>Delivery Method:</b> {{$order->getAttribute('delivery-method')}}</h4>
                   </div>

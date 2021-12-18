@@ -51,20 +51,38 @@
                                             @endif
                                         @endforeach </td>
 
-                                            <td>@foreach ($items as $item)
+                                            <td>
+                                            @php 
+                                                $total_grand = 0;
+                                            @endphp
+                                            @foreach ($items as $item)
                                             @if (!$item=="")
                                                 @php
                                                     $item = explode('-', $item);
                                                     $price = explode(':', $item[2]);
                                                     $total += $price[0]*$item[1];
+
+                                                    $grand_total = $price[0]*$item[1];
+
+                                                    $total_grand = $total_grand+$grand_total;
                                                 @endphp
-                                            <h5>₱{{$price[0]*$item[1]}}</h5>
+                                            <h5>₱{{number_format($grand_total,2)}}</h5>
                                                 @endif
-                                        @endforeach</td>
+                                             
+                                        @endforeach 
+                                        <hr class="m-0">
+                                        <b>   Shipping fee :</b> ₱{{number_format($order->shipping_fee,2)}} <br class="m-0">
+                                               <b> Grand total : </b> ₱{{number_format($total_grand+$order->shipping_fee,2)}}
+                                    </td>
                                             <td>
+                                                @if($order->status=='refund')
+                                                    <b class="text-danger">Refund Request</b>
+                                                @else
                                                 <form action="/confirm" method="POST">
                                                     <a href="orderconfirmed" button type="button" name="order_confirm" value="{{$order->tracking_number}}"class="btn btn-success">Confirm</button></a>
                                                 </form>
+                                                <a class="btn btn-danger refund" data-id="{{$order->id}}">Ask for Refund</a>
+                                                @endif
                                             </td>
                                         </tr>
                                 @endforeach
@@ -78,3 +96,15 @@
     </div>
  </div>
 </x-layout>
+<script>
+    $(document).ready(function(index){
+        $(document).on('click','.refund',function(){
+            var id = $(this).data('id');
+            if (confirm('Are you sure you want to refund this?')) {
+                $.post("{{route('home-functions',['id' => 'refund'])}}",{"_token": "{{ csrf_token() }}",id:id},function(){
+                    location.reload();
+                });
+            }
+        });
+    });
+</script>

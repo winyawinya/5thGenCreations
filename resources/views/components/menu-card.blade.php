@@ -75,7 +75,6 @@
                                             @else
                                                 <a href="#" class="mx-3 cardicon favorite" data-bs-toggle="modal" data-bs-target="#loginKaMuna"><i class="fas fa-heart"></i></a>
                                             @endauth
-
                                         @else
                                             <div class="d-flex ms-auto">
                                             @auth

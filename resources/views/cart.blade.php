@@ -44,3 +44,19 @@
     @endif
     </div>
   </x-layout>
+  <script>
+  $(document).ready(function(index){
+    $(document).on('change','input[name="qty[]"]',function(){
+      var id = $(this).data('id');
+      var qty = $(this).val();
+      $.post("{{route('home-functions',['id' => 'update-cart'])}}",{"_token": "{{ csrf_token() }}",id:id,qty:qty},function(data){
+         
+      });
+
+      const myTimeout = setTimeout(reloadData, 2000);
+    });
+    function reloadData() {
+      location.reload();
+    }
+  });
+</script>

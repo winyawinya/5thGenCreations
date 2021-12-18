@@ -14,7 +14,8 @@
       <div class="col-9 col-lg-4 col-xl-6 mt-3 mt-lg-0">
        <h5 class="card-title fs-2">{{$cartItem->name}}</h5>
         <p class="card-text fs-5">
-        Quantity: {{$cartItem->qty}}
+          
+        Quantity: <input value=" {{$cartItem->qty}}" maxlength="3" data-id="{{$cartItem->rowId}}" style="width: 68px;" name="qty[]" required/>
         <br>
         Price: {{$cartItem->price}}
       @if ($cartItem->options->flavor != "")
@@ -32,5 +33,6 @@
           <button type="submit" class="btn btn-danger me-3 fs-5">Remove</button>
         </form>
       </div>
-  </div>    
+  </div>
+      
 </div>

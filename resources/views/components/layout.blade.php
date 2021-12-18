@@ -22,6 +22,7 @@
 </script>
   </head>
   <body>
+
     <!-- navigation bar -->
     <nav class="navbar hammersmithfont navbar-light bg-white sticky-top navbar-expand-lg pb-3 pb-lg-0">
       <div class="container">
@@ -33,6 +34,7 @@
           <ul class="navbar-nav text-center">
             <li class="nav-item ms-0 ms-lg-3"><a href="/" class="nav-link">HOME</a></li>
             <li class="nav-item ms-0 ms-lg-3"><a href="/products" class="nav-link">PRODUCTS</a></li>
+            <li class="nav-item ms-0 ms-lg-3" ><a class="nav-link" data-bs-toggle="modal" data-bs-target="#inquiry-modal">Send Inquiry</a></li>
           </ul>
           <ul class="navbar-nav login text-center ms-auto me-lg-3">
             @guest
@@ -170,7 +172,43 @@
     </div>
   </div>
 </div>
+<div id="inquiry-modal" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-lg">
 
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4 class="modal-title">Send Inquiry</h4>
+        
+      </div>
+      <div class="modal-body">
+      <form action="{{route('home-functions',['id' => 'send-inquiry'])}}" method="POST" id="inquiry-form" autocomplete="off">
+        @csrf
+        <div class="form-group">
+          <b>Name:</b>
+          <input class="form-control" name="fullname" placeholder="Fullname" required/>
+        </div>
+        <div class="form-group">
+          <b>Email: <span class="text-danger">*Gmail Account only</span></b>
+          <input class="form-control" name="email" type="email" placeholder="example@gmail.com" required/>
+        </div>
+        <div class="form-group">
+          <b>Reason:</b>
+          <input class="form-control" name="reason" placeholder="Ex. I would like to inquire for party cookies" required/>
+        </div>
+        <div class="form-group">
+          <b>Message:</b>
+          <textarea rows="3" class="form-control" name="message" required></textarea>
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success" form="inquiry-form">Send Inquiry</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 <div class="modal fade" id="privacy" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -203,3 +241,24 @@
           <b>3. How many days shall i pre-order?</b><br>
           For our small pastries, we highly suggest that you preorder at least 3 days before your preferred delivery date. For cakes, we recommend to pre-order 5 days before.</p>
 </div>
+@if(Session::has('success'))
+        @if(Session::get('success') == '1')
+            <script>
+                $(function(){
+                    alert('Success','{{ Session::get("message") }}','DIALOG','success');
+                });
+            </script>
+        @elseif(Session::get('success') == '2')
+            <script>
+                $(function(){
+                  alert('Information','{{ Session::get("message") }}','DIALOG');
+                });
+            </script>
+        @else
+            <script>
+                $(function(){
+                  alert('Failed','{{ Session::get("message") }}','DIALOG','danger');
+                });
+            </script>
+        @endif
+    @endif
