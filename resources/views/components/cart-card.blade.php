@@ -1,5 +1,4 @@
 {{--
-    Variables to pass pag gagamitin tong component
     $cartItem = collection
 --}}
 @php
