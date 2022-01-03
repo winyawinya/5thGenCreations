@@ -42,7 +42,7 @@
       <form action="{{route('cartAdd')}}" method="POST">
         @csrf
       <div class="modal-body">
-        <!-- MODAL CONTENT OTIDS -->
+        <!-- MODAL CONTENT -->
         
           <img src="assets\menu\{{$item->name}}.jpg" alt="" height="100%" width="100%"/>
           <input type="hidden" name="id" value="{{$item->id}}"/>

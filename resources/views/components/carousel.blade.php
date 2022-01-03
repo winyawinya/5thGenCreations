@@ -1,5 +1,5 @@
 {{--
-    Variables to pass pag gagamitin tong component
+    Variables to pass
     $midButtons = boolean
 
 --}}
@@ -17,8 +17,6 @@
     </div>
 
     <div class="carousel-inner">
-      <!-- NOTE! Kung iibahin niyo yung carousel images, iresize niyo yung MISMONG image na ipapalit gamit MS Paint. -->
-      <!-- yung ginawa ko is HEIGHT = 1200px and WIDTH = 450px, kung gusto niyo ibahin size make sure pareparehas ng size lahat. -->
       <div class="carousel-content playlistfont">
         
         <h1>Welcome<img src="assets\paint (2).png" class="splashpaint" style="top: -20%; left: -75%;"></h1>

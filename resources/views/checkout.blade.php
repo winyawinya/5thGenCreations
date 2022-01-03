@@ -142,7 +142,6 @@
                                     <hr>
                                     <input class="form-control" type="hidden" name="grand_total" value="{{$total+50}}"/>
                                     <button type="submit" class="btn cardbtn rounded-pill w-100 mt-4 fs-4">Place Order</button>
-                                    <!-- <a href="thankyou" class="btn cardbtn rounded-pill w-100 mt-4 fs-4">Place Order</a> -->
                                 </div>
                             </div>
                         </div>

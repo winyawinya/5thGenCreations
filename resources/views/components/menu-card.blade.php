@@ -1,5 +1,5 @@
 {{--
-    Variables to pass pag gagamitin tong component
+    Variables to pass 
     $menu = Collection
     $limit = int
     $withCategory = boolean
